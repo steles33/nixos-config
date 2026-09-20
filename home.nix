@@ -8,9 +8,16 @@ home.packages = with pkgs; [
   vscode
   foot
 ];
-# programs.sway = {
-  # enable = true;
-  # config = { terminal = "kitty"; menu = "fuzzel"; startup = [ { command = "waybar"; } ];
-  # };
+wayland.windowManager.sway = {
+  enable = true;
+  wrapperFeatures.gtk = true;
+  config = rec {
+    modifier = "Mod4";
+    terminal = "foot";
+    startup = [
+      { command = "firefox"; }
+    ];
+  };
+};
 home.stateVersion = "26.05";
 }

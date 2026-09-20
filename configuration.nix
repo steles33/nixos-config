@@ -113,5 +113,11 @@
 
   # NixOS settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+  # Allowing sway to work (enabling Polkit)
+  security.polkit.enable = true;
+  
+  # Greeter
+  programs.regreet.enable = true;
 
 }
