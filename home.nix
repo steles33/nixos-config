@@ -21,7 +21,7 @@ wayland.windowManager.sway = {
         xkb_layout = "de";
       };
     };
-    fonts.names = [ "monospace" ]
+    fonts.names = [ "monospace" ];
     fonts.size = "16";
   };
 };
