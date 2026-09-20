@@ -7,6 +7,7 @@ home.packages = with pkgs; [
   firefox
   vscode
   foot
+  keepassxc
 ];
 wayland.windowManager.sway = {
   enable = true;
@@ -14,9 +15,12 @@ wayland.windowManager.sway = {
   config = rec {
     modifier = "Mod4";
     terminal = "foot";
-    startup = [
-      { command = "firefox"; }
-    ];
+    startup = [ { command = "firefox"; } ];
+    input = {
+      "*" = {
+        xkb_layout = "de";
+      };
+    };  
   };
 };
 home.stateVersion = "26.05";
