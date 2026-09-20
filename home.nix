@@ -20,7 +20,9 @@ wayland.windowManager.sway = {
       "*" = {
         xkb_layout = "de";
       };
-    };  
+    };
+    fonts.names = [ "monospace" ]
+    fonts.size = "16";
   };
 };
 home.stateVersion = "26.05";
