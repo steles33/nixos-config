@@ -6,8 +6,7 @@ home.packages = with pkgs; [
   fuzzel
   firefox
   vscode
-  git
-  kitty
+  foot
 ];
 # programs.sway = {
   # enable = true;

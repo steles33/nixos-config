@@ -77,7 +77,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    wget
     git
+    mc
+    htop
+    fastfetch
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -91,7 +95,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -107,6 +111,7 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
 
+  # NixOS settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 }
