@@ -30,7 +30,7 @@ programs.foot = {
   enable = true;
   settings = {
     main = {
-      font = "JetBrainsMono Nerd Font:size=11";
+      font = "JetBrainsMono Nerd Font:size=20";
       pad = "2px";
     };
     colors = {
@@ -50,7 +50,7 @@ programs.waybar = {
     mainBar = {
       layer = "top";
       position = "top";
-      height = 30;
+      height = 34;
       modules-left = [ "sway/workspaces" "sway/mode" ];
       modules-center = [ "sway/window" ];
       modules-right = [ "pulseaudio" "network" "cpu" "memory" "clock" "tray" ];
