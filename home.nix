@@ -144,10 +144,10 @@ programs.foot = {
   settings = {
     main = {
       font = "JetBrainsMono Nerd Font:size=16";
-      # pad = "2x2";
+      pad = "0x0";
     };
     colors-dark = {
-      alpha = 0.5;
+      alpha = 0.7;
       background = "1e1e2e";
       foreground = "cdd6f4";
     };
