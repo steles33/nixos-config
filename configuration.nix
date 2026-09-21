@@ -68,6 +68,7 @@
     extraPackages = with pkgs; [
       swaylock
       swayidle
+      swaybg
       waybar
       wofi
     ];

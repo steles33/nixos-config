@@ -1,6 +1,7 @@
-{pkgs, ... }: {
+{config, pkgs, ... }: {
 home.username = "steles33";
 home.homeDirectory = "/home/steles33";
+home.stateVersion = "26.05";
 home.packages = with pkgs; [
   waybar
   foot
@@ -91,5 +92,4 @@ programs.fuzzel = {
   };
 };
 
-home.stateVersion = "26.05";
 }
