@@ -107,7 +107,21 @@ wayland.windowManager.sway = {
         "XF86AudioMute" =
           "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
       };
-    startup = [ { command = "waybar"; } ];
+    startup = [
+        {
+          command = "swaybg -i ~/Pictures/Sway_Wallpaper_Blue_1920x1080.png -m fill";
+          always = true;
+        }
+        {
+          command = "blueman-applet";
+          always = true;
+        }
+      ];
+    bars = [
+        {
+          command = "waybar";
+        }
+      ];  
     input = {
       "*" = {
         xkb_layout = "de";
