@@ -73,10 +73,10 @@ wayland.windowManager.sway = {
         "${modifier}+Right" = "focus right";
 
         # Move windows
-        "${modifier}+Shift+h" = "move left";
-        "${modifier}+Shift+j" = "move down";
-        "${modifier}+Shift+k" = "move up";
-        "${modifier}+Shift+l" = "move right";
+        "${modifier}+Shift+Left" = "move left";
+        "${modifier}+Shift+Down" = "move down";
+        "${modifier}+Shift+Up" = "move up";
+        "${modifier}+Shift+Right" = "move right";
 
         # Workspaces
         "${modifier}+1" = "workspace number 1";
