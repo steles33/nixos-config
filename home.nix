@@ -30,14 +30,47 @@ wayland.windowManager.sway = {
         "${modifier}+Return" = "exec ${terminal}";
         "${modifier}+d" = "exec ${menu}";
         "${modifier}+Shift+q" = "kill";
+
+        # Apps
+        "${modifier}+i" = "exec firefox";
+        "${modifier}+c" = "exec thunderbird";
+        "${modifier}+n" = "exec signal-desktop";
+        "${modifier}+o" = "exec dolphin";
+        "${modifier}+k" = "exec krusader --left ~ --right ~";
+        "${modifier}+m" = "exec elisa";
+
+        # Screenshots
+        "${modifier}+p" = "exec grim -g \"$(slurp)\" - | swappy -f -";
+
+        # Notifications
+        "${modifier}+Shift+n"= "exec swaync-client -t -sw";
+
+        # Lock
+        "${modifier}+l" = "exec swaylock -f -c 1e1e2e";
+
+        # Reload / Restart/ Exit
         "${modifier}+Shift+c" = "reload";
-        "${modifier}+Shift+e" = "exit";
+        "${modifier}+Shift+r" = "restart";
+        "${modifier}+Shift+e" = "exec swaynag -t warning -m 'Exit Sway?' -B 'Yes' 'swaymsg exit'";
+
+        # Splitting + Layout
+        "${modifier}+h" = "splith";
+        "${modifier}+v" = "splitv";
+        "${modifier}+s" = "layout stacking";
+        "${modifier}+t" = "layout tabbed";
+        "${modifier}+e" = "layout toggle split";
+
+        # Fullscreen + Floating
+        "${modifier}+f" = "fullscreen toggle";
+        "${modifier}+space" = "focus mode toggle";
+        "${modifier}+Shift+space" = "floating toggle";
+        "${modifier}+a" = "focus parent";
 
         # Move focus
-        "${modifier}+h" = "focus left";
-        "${modifier}+j" = "focus down";
-        "${modifier}+k" = "focus up";
-        "${modifier}+l" = "focus right";
+        "${modifier}+Left" = "focus left";
+        "${modifier}+Down" = "focus down";
+        "${modifier}+Up" = "focus up";
+        "${modifier}+Right" = "focus right";
 
         # Move windows
         "${modifier}+Shift+h" = "move left";
