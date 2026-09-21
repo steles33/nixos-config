@@ -144,7 +144,7 @@ programs.foot = {
   settings = {
     main = {
       font = "JetBrainsMono Nerd Font:size=16";
-      pad = "0x0";
+      pad = "2x2";
     };
     colors-dark = {
       alpha = 0.7;
@@ -246,5 +246,18 @@ programs.waybar = {
       show-failed-attempts = true;
     };
   };
+  programs.fish = {
+    enable = true;
 
+    interactiveShellInit = ''
+      set fish_greeting
+    '';
+
+    shellAliases = {
+      ll = "ls -lah";
+      la = "ls -A";
+      ".." = "cd ..";
+      rebuild = "sudo nixos-rebuild switch";
+    };
+  };
 }

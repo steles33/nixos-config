@@ -1,6 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
 
@@ -56,9 +53,12 @@
     isNormalUser = true;
     description = "steles33";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
     packages = with pkgs; [];
   };
-
+  
+  programs.fish.enable = true;
+  
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
