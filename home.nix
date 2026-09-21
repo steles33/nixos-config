@@ -144,16 +144,16 @@ programs.foot = {
   settings = {
     main = {
       font = "JetBrainsMono Nerd Font:size=16";
-      pad = "2px";
+      pad = "2x2";
     };
-    colors = {
-      alpha = 0.9;
+    colors-dark = {
+      alpha = 0.5;
       background = "1e1e2e";
       foreground = "cdd6f4";
     };
     cursor = {
-      color = "f5e0dc";
       style = "block";
+      blink = "yes";
     };
   };
 };
