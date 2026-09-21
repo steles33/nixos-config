@@ -184,24 +184,46 @@ programs.waybar = {
     }
   '';
 };
-programs.fuzzel = {
-  enable = true;
-  settings = {
-    main = {
-      terminal = "foot";
-      width = 30;
-      horizontal-dp = false;
-      font = "JetBrainsMono Nerd Font:size=12";
-    };
-    colors = {
-      background = "1e1e2e";
-      text = "cdd6f4";
-      match = "f5e0dc";
-      selection = "45475a";
-      selection-text = "cdd6f4";
-      border = "b4befe";
+#programs.fuzzel = {
+#  enable = true;
+#  settings = {
+#    main = {
+#      terminal = "foot";
+#      width = 30;
+#      horizontal-dp = false;
+#      font = "JetBrainsMono Nerd Font:size=12";
+#    };
+#    colors = {
+#      background = "1e1e2e";
+#      text = "cdd6f4";
+#      match = "f5e0dc";
+#      selection = "45475a";
+#      selection-text = "cdd6f4";
+#      border = "b4befe";
+#    };
+#  };
+#};
+  programs.fuzzel = {
+    enable = true;
+    settings = {
+      main = {
+        font = "monospace:size=18";
+        lines = 15;
+        auto-select = true;
+      };
+      colors = {
+        background = "14161Be5";
+        text = "F5F5F5FF";
+        selection-match = "A2D6F9ff";
+        match = "A2D6F9ff";
+        selection = "4F5258ff";
+        selection-text = "F5F5F5FF";
+        border = "A1A1A1FF";
+      };
+      border = {
+        radius = 5;
+        width = 4;
+      };
     };
   };
-};
-
 }
