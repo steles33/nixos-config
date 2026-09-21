@@ -16,7 +16,7 @@ home.packages = with pkgs; [
   swaynotificationcenter
   networkmanagerapplet
   pwvucontrol
-  
+  blueman
 ];
 wayland.windowManager.sway = {
   enable = true;
