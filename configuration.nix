@@ -118,6 +118,6 @@
   security.polkit.enable = true;
   
   # Greeter
-  programs.regreet.enable = true;
+  services.displayManager.regreet.enable = true;
 
 }

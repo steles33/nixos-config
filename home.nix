@@ -24,6 +24,7 @@ wayland.windowManager.sway = {
   config = rec {
     modifier = "Mod4";
     terminal = "foot";
+    menu = "fuzzel";
     startup = [ { command = "waybar"; } ];
     input = {
       "*" = {
@@ -34,9 +35,10 @@ wayland.windowManager.sway = {
     fonts.size = "16";
     window.commands = [
       {
-        criteria = { app_id = "firefox";
+        criteria = {
+          app_id = "firefox";
         };
-        command = "border = none";
+        command = "border none";
       }
     ];
   };
