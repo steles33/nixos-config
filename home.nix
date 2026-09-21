@@ -109,7 +109,7 @@ wayland.windowManager.sway = {
       };
     startup = [
         {
-          command = "swaybg -i ~/Pictures/Sway_Wallpaper_Blue_1920x1080.png -m fill";
+          command = "swaybg -i ~/Pictures/NixOS-Gradient-grey.png -m fill";
           always = true;
         }
         {
