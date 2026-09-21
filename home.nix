@@ -9,6 +9,14 @@ home.packages = with pkgs; [
   firefox
   vscode
   keepassxc
+  wl-clipboard
+  grim
+  slurp
+  swappy
+  swaynotificationcenter
+  networkmanagerapplet
+  pwvucontrol
+  
 ];
 wayland.windowManager.sway = {
   enable = true;
@@ -24,7 +32,13 @@ wayland.windowManager.sway = {
     };
     fonts.names = [ "monospace" ];
     fonts.size = "16";
-
+    window.commands = [
+      {
+        criteria = { app_id = "firefox";
+        };
+        command = "border = none";
+      }
+    ];
   };
 };
 programs.foot = {
