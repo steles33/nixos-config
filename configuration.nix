@@ -70,7 +70,6 @@
       swayidle
       waybar
       wofi
-      kitty
     ];
   };
 

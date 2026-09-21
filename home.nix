@@ -15,7 +15,7 @@ wayland.windowManager.sway = {
   config = rec {
     modifier = "Mod4";
     terminal = "foot";
-    startup = [ { command = "firefox"; } ];
+    startup = [ { command = "waybar"; } ];
     input = {
       "*" = {
         xkb_layout = "de";
@@ -30,7 +30,7 @@ programs.foot = {
   enable = true;
   settings = {
     main = {
-      font = "JetBrainsMono Nerd Font:size=20";
+      font = "JetBrainsMono Nerd Font:size=18";
       pad = "2px";
     };
     colors = {
@@ -70,6 +70,25 @@ programs.waybar = {
       padding: 0 10px;
     }
   '';
+};
+programs.fuzzel = {
+  enable = true;
+  settings = {
+    main = {
+      terminal = "foot";
+      width = 30;
+      horizontal-dp = false;
+      font = "JetBrainsMono Nerd Font:size=12";
+    };
+    colors = {
+      background = "1e1e2e";
+      text = "cdd6f4";
+      match = "f5e0dc";
+      selection = "45475a";
+      selection-text = "cdd6f4";
+      border = "b4befe";
+    };
+  };
 };
 
 home.stateVersion = "26.05";
