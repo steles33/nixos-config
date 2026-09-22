@@ -82,6 +82,7 @@
     fastfetch
     tldr
     usbutils
+    usb-modeswitch
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
