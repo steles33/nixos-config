@@ -164,6 +164,7 @@ programs.waybar = {
       layer = "top";
       position = "top";
       height = 34;
+      output = [ "HDMI-A-2" ];
       modules-left = [ "sway/workspaces" "sway/mode" ];
       modules-center = [ "sway/window" ];
       modules-right = [ "pulseaudio" "network" "cpu" "memory" "clock" "tray" ];
