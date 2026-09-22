@@ -177,14 +177,35 @@ programs.waybar = {
     };
   };
   style = ''
-    window#waybar {
-      background: rgba(43, 48, 59, 0.5);
-      color: #ffffff;
-    }
-    #clock {
-      padding: 0 10px;
-    }
-  '';
+      * {
+        font-family: monospace, FontAwesome;
+        font-size: 22px;
+      }
+
+      window#waybar {
+        background: rgba(24, 24, 37, 0.95);
+        color: #cdd6f4;
+      }
+
+      #workspaces button {
+        padding: 0 8px;
+        color: #a6adc8;
+        background: transparent;
+        border: none;
+      }
+
+      #workspaces button.focused {
+        color: #89b4fa;
+        background: #313244;
+      }
+
+      #clock,
+      #network,
+      #pulseaudio,
+      #battery {
+        padding: 0 10px;
+      }
+    '';
 };
 #programs.fuzzel = {
 #  enable = true;
