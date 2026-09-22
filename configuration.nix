@@ -69,8 +69,6 @@
       swaylock
       swayidle
       swaybg
-      waybar
-      wofi
     ];
   };
 
