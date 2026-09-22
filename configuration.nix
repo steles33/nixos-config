@@ -81,6 +81,7 @@
     htop
     fastfetch
     tldr
+    usbutils
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

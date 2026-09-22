@@ -174,21 +174,21 @@ programs.waybar = {
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "cpu" = {
-        format = " cpu:{usage}%  ";
+        format = " :{usage}%  ";
         tooltip = false;
       };
       "memory" = {
         interval = 30;
-        format = "mem:{}%  ";
+        format = ":{}%  ";
       };
       "disk" = {
         interval = 30;
-        format = "disk:{percentage_used}%  ";
+        format = ":{percentage_used}%  ";
       };
       "network" = {
         interval = 1;
         format-wifi = "{signalStrength}%   |  {bandwidthDownBits}   |  {bandwidthUpBits} ";
-        format-ethernet = " lan: {bandwidthDownBits}   {bandwidthUpBits} ";
+        format-ethernet = "  {bandwidthDownBits} {bandwidthUpBits}";
         tooltip-format = "{essid} via {gwaddr} ";
         format-linked = "{ifname} (No IP) ";
         format-disconnected = "󰖪";
@@ -197,7 +197,7 @@ programs.waybar = {
       "pulseaudio" = {
         format = "{icon} {volume}%";
         format-bluetooth = "{icon}  {volume}% {format_source}";
-        format-muted = " muted";
+        format-muted = "󰝟 muted";
         format-icons = { default = [ "" "" "" ]; };
         on-click = "pwvucontrol";
       };
