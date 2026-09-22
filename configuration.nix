@@ -125,4 +125,19 @@
   # Greeter
   services.displayManager.regreet.enable = true;
 
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
+  # Optional GUI for pairing and managing devices
+  services.blueman.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+  security.rtkit.enable = true;
 }
