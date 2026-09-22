@@ -81,7 +81,10 @@
     htop
     fastfetch
     tldr
-    font-awesome
+  ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.symbols-only
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
