@@ -18,6 +18,9 @@ home.packages = with pkgs; [
   pwvucontrol
   blueman
 ];
+imports = [
+  ./wallpaper.nix
+];
 wayland.windowManager.sway = {
   enable = true;
   wrapperFeatures.gtk = true;
