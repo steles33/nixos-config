@@ -111,10 +111,10 @@ wayland.windowManager.sway = {
           "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
       };
     startup = [
-        {
-          command = "swaybg -i ~/Pictures/NixOS-Gradient-grey.png -m fill";
-          always = true;
-        }
+        # {
+        #   command = "swaybg -i ~/Pictures/NixOS-Gradient-grey.png -m fill";
+        #   always = true;
+        # }
         {
           command = "blueman-applet";
           always = true;
@@ -191,7 +191,7 @@ programs.waybar = {
       "network" = {
         interval = 1;
         format-wifi = "{signalStrength}%   |  {bandwidthDownBits}   |  {bandwidthUpBits} ";
-        format-ethernet = "  {bandwidthDownBits} {bandwidthUpBits}";
+        format-ethernet = "  {bandwidthDownBits}  {bandwidthUpBits} ";
         tooltip-format = "{essid} via {gwaddr} ";
         format-linked = "{ifname} (No IP) ";
         format-disconnected = "󰖪";
