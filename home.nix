@@ -33,6 +33,7 @@ wayland.windowManager.sway = {
         # Add or replace bindings
         "${modifier}+Return" = "exec ${terminal}";
         "${modifier}+d" = "exec ${menu}";
+        "${modifier}+Shift+d" = "exec xfce4-appfinder --collapsed";
         "${modifier}+Shift+q" = "kill";
 
         # Apps
