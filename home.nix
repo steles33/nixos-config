@@ -134,12 +134,12 @@ wayland.windowManager.sway = {
     fonts.names = [ "monospace" ];
     fonts.size = "16";
     window.commands = [
-      {
-        criteria = {
-          app_id = "firefox";
-        };
-        command = "border none";
-      }
+      { criteria = { app_id = "firefox"; };
+          command = "border none"; 
+          }
+      {  criteria = { title = "Application Finder"; }; 
+          command = "floating enable"; 
+          }
     ];
   };
 };
