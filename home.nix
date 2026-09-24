@@ -33,7 +33,7 @@ wayland.windowManager.sway = {
         # Add or replace bindings
         "${modifier}+Return" = "exec ${terminal}";
         "${modifier}+d" = "exec ${menu}";
-        "${modifier}+Shift+d" = "exec xfce4-appfinder --collapsed";
+        "${modifier}+Shift+d" = "exec xfce4-appfinder";
         "${modifier}+Shift+q" = "kill";
 
         # Apps
@@ -138,8 +138,8 @@ wayland.windowManager.sway = {
       { criteria = { app_id = "firefox"; };
           command = "border none"; 
           }
-      {  criteria = { title = "Application Finder"; }; 
-          command = "floating enable"; 
+      {  criteria = { app_id = "xfce4-appfinder"; }; 
+          command = "floating enable, resize set width 700 px height 500 px, move position center"; 
           }
     ];
   };
