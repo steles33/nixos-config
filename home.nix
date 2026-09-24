@@ -17,6 +17,7 @@ home.packages = with pkgs; [
   networkmanagerapplet
   pwvucontrol
   blueman
+  xfce4-appfinder
 ];
 imports = [
   ./wallpaper.nix
@@ -166,7 +167,7 @@ programs.waybar = {
     mainBar = {
       position = "top";
       height = 34;
-      spacing =50;
+      spacing =50; # gaps between modules
       output = [ "HDMI-A-2" ];
       modules-left = [ "sway/mode" "network" ];
       modules-center = [ "sway/workspaces" "wlr/taskbar" "clock" "mpd" ];
