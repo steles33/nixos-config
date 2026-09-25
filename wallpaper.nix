@@ -5,6 +5,7 @@ let
   # Available options: simple-blue, simple-red, binary-blue, binary-black, waterfall, watersplash, etc.
   wallpaperPath = "${pkgs.nixos-artwork.wallpapers.simple-blue}/share/backgrounds/nixos/nix-wallpaper-simple-blue.png";
 in
+
 {
   # Install the wallpaper utility
   home.packages = [
