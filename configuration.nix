@@ -83,6 +83,7 @@
     tldr
     usbutils
     usb-modeswitch
+    usb-modeswitch-data
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
@@ -140,4 +141,15 @@
     pulse.enable = true;
   };
   security.rtkit.enable = true;
+
+  systemd.services.usb-modeswitch-bluetooth = {
+  description = "Switch USB Bluetooth Controller Mode";
+  wantedBy = [ "multi-user.target" ];
+  serviceConfig = {
+    Type = "oneshot";
+    ExecStart = "${pkgs.usb-modeswitch}/bin/usb_modeswitch -KW -v 0bda -p 1a2b";
+    RemainAfterExit = true;
+    };
+  };
+
 }
