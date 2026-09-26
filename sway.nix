@@ -3,7 +3,7 @@
   wayland.windowManager.sway = {
   enable = true;
   wrapperFeatures.gtk = true;
-  config = rec {
+  config = {
     modifier = "Mod4";
     terminal = "foot";
     menu = "fuzzel";
