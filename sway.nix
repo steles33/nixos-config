@@ -82,6 +82,28 @@
         "${modifier}+Shift+8" = "move container to workspace number 8";
         "${modifier}+Shift+9" = "move container to workspace number 9";
 
+        # Resize Mode
+        "${modifier}+r" = "mode resize";
+        modes = {
+        resize = {
+          # Vim-style resizing
+          h = "resize shrink width 10 px";
+          j = "resize grow height 10 px";
+          k = "resize shrink height 10 px";
+          l = "resize grow width 10 px";
+
+          # Arrow-key resizing
+          Left = "resize shrink width 10 px";
+          Down = "resize grow height 10 px";
+          Up = "resize shrink height 10 px";
+          Right = "resize grow width 10 px";
+
+          # Leave resize mode
+          Escape = "mode default";
+          Return = "mode default";
+        };
+      };
+
         # Media keys
         "XF86AudioRaiseVolume" =
           "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
