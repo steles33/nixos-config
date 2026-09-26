@@ -142,6 +142,7 @@
   };
   security.rtkit.enable = true;
 
+  # USB-Mode switch setting for external UBS-Bluetooth-Controller
   systemd.services.usb-modeswitch-bluetooth = {
   description = "Switch USB Bluetooth Controller Mode";
   wantedBy = [ "multi-user.target" ];
