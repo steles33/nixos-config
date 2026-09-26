@@ -23,7 +23,7 @@ imports = [
   ./sway.nix
   ./waybar.nix
   ./wallpaper.nix
-  ./foot-nix
+  ./foot.nix
 ];
   programs.fuzzel = {
     enable = true;
