@@ -27,5 +27,6 @@ imports = [
   ./foot.nix
   ./fuzzel.nix
   ./fish.nix
+  ./vscode.nix
 ];
 }
