@@ -8,6 +8,7 @@
     # ... other extensions
   ];
   userSettings = {
+    "workbench.colorTheme" = "Light 2026";
     "editor.fontSize" = 20;
     # ... other settings
   };
