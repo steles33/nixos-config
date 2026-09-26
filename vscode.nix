@@ -12,5 +12,4 @@
     # ... other settings
   };
 };
-
 }
