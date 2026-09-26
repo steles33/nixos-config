@@ -8,7 +8,7 @@
     # ... other extensions
   ];
   userSettings = {
-    "editor.fontSize" = 14;
+    "editor.fontSize" = 20;
     # ... other settings
   };
 };
