@@ -10,8 +10,13 @@ programs.waybar = {
       spacing =20; # gaps between modules
       output = [ "HDMI-A-2" ];
       modules-left = [ "sway/mode" "network" ];
-      modules-center = [ "sway/workspaces" "wlr/taskbar" "clock" "mpd" ];
+      modules-center = [ "clock_left" "sway/workspaces" "wlr/taskbar" "clock" "mpd" ];
       modules-right = [ "pulseaudio" "bluetooth" "cpu" "memory" "disk" "battery" "tray" ];
+      "clock_left" = {
+        interval = 1;
+        format = " {:%a %d.%m.%y  %H:%M:%S}";
+        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+      };
       "clock" = {
         interval = 1;
         format = " {:%a %d.%m.%y  %H:%M:%S}";
