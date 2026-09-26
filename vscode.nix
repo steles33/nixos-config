@@ -13,6 +13,6 @@
       "editor.fontSize" = 20;
       # ... other settings
     };
-  }
+  };
 };
 }
