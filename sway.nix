@@ -112,8 +112,6 @@
     };
     fonts.names = [ "monospace" ];
     fonts.size = "16";
-    window.titlebar = "false";
-    window.border = 5;
     window.commands = [
       { criteria = { app_id = "firefox"; };
           command = "border none"; 
@@ -125,7 +123,7 @@
   };
     extraConfig = ''
     # Tiled windows: no border or title bar
-    # default_border none
+    default_border pixel 5
     
     # Floating windows: show the normal title bar
     default_floating_border normal
@@ -133,6 +131,7 @@
     # Gaps
     gaps inner 10
     gaps outer 5
+
   '';
 };
 }
