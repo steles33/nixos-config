@@ -85,20 +85,17 @@
         # Resize Mode
         "${modifier}+r" = "mode resize";
         modes = {
-        resize = {
-          # Vim-style resizing
+          resize = {
           h = "resize shrink width 10 px";
           j = "resize grow height 10 px";
           k = "resize shrink height 10 px";
           l = "resize grow width 10 px";
 
-          # Arrow-key resizing
           Left = "resize shrink width 10 px";
           Down = "resize grow height 10 px";
           Up = "resize shrink height 10 px";
           Right = "resize grow width 10 px";
 
-          # Leave resize mode
           Escape = "mode default";
           Return = "mode default";
         };
