@@ -7,6 +7,12 @@
     modifier = "Mod4";
     terminal = "foot";
     menu = "fuzzel";
+    default_border = "none";
+    default_floating_border = "normal";
+    gaps = {
+      inner = 10;
+      outer = 5;
+    }
     keybindings = {
         # Add or replace bindings
         "${modifier}+Return" = "exec ${terminal}";
