@@ -12,7 +12,7 @@
     gaps = {
       inner = 10;
       outer = 5;
-    }
+    };
     keybindings = {
         # Add or replace bindings
         "${modifier}+Return" = "exec ${terminal}";
