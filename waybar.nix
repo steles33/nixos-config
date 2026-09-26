@@ -15,28 +15,28 @@ programs.waybar = {
       "custom/clock-1" = {
         exec = "date +'%a %d.%m.%y'";
         interval = 60;
-        format = " {}";
+        format = "  {}";
         tooltip = "false";
         # tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "custom/clock-2" = {
         exec = "date +%H:%M:%S";
         interval = 1;
-        format = " {}";
+        format = "  {}";
         tooltip = "false";
         # tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "cpu" = {
-        format = " :{usage}%  ";
+        format = " : {usage}%  ";
         tooltip = false;
       };
       "memory" = {
         interval = 30;
-        format = ":{}%  ";
+        format = ": {}%  ";
       };
       "disk" = {
         interval = 30;
-        format = ":{percentage_used}%  ";
+        format = ": {percentage_used}%  ";
       };
       "network" = {
         interval = 1;
