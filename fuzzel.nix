@@ -6,7 +6,7 @@
       main = {
         font = "monospace:size=18";
         lines = 15;
-        auto-select = true;
+        auto-select = false;
       };
       colors = {
         background = "14161Be5";
