@@ -3,16 +3,10 @@
   wayland.windowManager.sway = {
   enable = true;
   wrapperFeatures.gtk = true;
-  config = {
+  config = rec {
     modifier = "Mod4";
     terminal = "foot";
     menu = "fuzzel";
-    default_border = "none";
-    default_floating_border = "normal";
-    gaps = {
-      inner = 10;
-      outer = 5;
-    };
     keybindings = {
         # Add or replace bindings
         "${modifier}+Return" = "exec ${terminal}";
@@ -127,5 +121,16 @@
           }
     ];
   };
+    extraConfig = ''
+    # Tiled windows: no border or title bar
+    default_border none
+    
+    # Floating windows: show the normal title bar
+    default_floating_border normal
+    
+    # Gaps
+    gaps inner 10
+    gaps outer 5
+  '';
 };
 }
