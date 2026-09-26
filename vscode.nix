@@ -4,8 +4,7 @@
   enable = true;
   package = pkgs.vscode; 
   extensions = with pkgs.vscode-extensions; [
-    nix-ide # This provides the Nix language support
-    vscode-langextensions.vscode-python
+    bbenoist.nix # This provides the Nix language support
     # ... other extensions
   ];
   userSettings = {
