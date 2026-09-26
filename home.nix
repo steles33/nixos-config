@@ -38,7 +38,7 @@ imports = [
       ll = "ls -lah";
       la = "ls -A";
       ".." = "cd ..";
-      rebuild = "sudo nixos-rebuild switch";
+      rebuild = "sudo nixos-rebuild switch --flake .#m920q";
     };
   };
 }
