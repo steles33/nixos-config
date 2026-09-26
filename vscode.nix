@@ -4,7 +4,7 @@
   enable = true;
   package = pkgs.vscode; 
   extensions = with pkgs.vscode-extensions; [
-    vscode-nix # This provides the Nix language support
+    nix-ide # This provides the Nix language support
     vscode-langextensions.vscode-python
     # ... other extensions
   ];
