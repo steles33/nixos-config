@@ -20,7 +20,7 @@ programs.waybar = {
         exec = "date +%H:%M:%S";
         interval = 1;
         format = "  {}";
-        tooltip = "false";
+        tooltip = false;
       };
       "cpu" = {
         format = " : {usage}%  ";
