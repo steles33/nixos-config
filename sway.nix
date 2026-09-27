@@ -129,8 +129,8 @@
     input = {
       "*" = {
         xkb_layout = "de";
-        xkb_variant "nodeadkeys";
-        xkb_numlock "enabled";
+        xkb_variant = "nodeadkeys";
+        xkb_numlock = "enabled";
       };
     };
     fonts.names = [ "monospace" ];
