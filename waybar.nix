@@ -22,7 +22,8 @@ programs.waybar = {
         exec = "date +%H:%M:%S";
         interval = 1;
         format = "  {}";
-        tooltip = false";
+        tooltip = false"
+        # tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "cpu" = {
         format = " : {usage}%  ";
