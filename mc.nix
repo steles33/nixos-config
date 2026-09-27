@@ -6,6 +6,7 @@
     settings = {
       Panels = {
         show_dot_files = false;
+        use_internal_edit = true;
       };
     };
   };
