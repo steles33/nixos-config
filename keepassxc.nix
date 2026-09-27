@@ -3,7 +3,7 @@
   programs.keepassxc = {
     enable = true;
     package = pkgs.keepassxc;
-    setting = {
+    settings = {
       Browser = {
         Enabled = true;
       };
