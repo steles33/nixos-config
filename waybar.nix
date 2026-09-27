@@ -15,13 +15,14 @@ programs.waybar = {
         exec = "date +'%a %d.%m.%y'";
         interval = 60;
         format = "  {}";
+        tooltip = true;
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "custom/clock-2" = {
         exec = "date +%H:%M:%S";
         interval = 1;
         format = "  {}";
-        tooltip = "false";
+        tooltip = false"
         # tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "cpu" = {
