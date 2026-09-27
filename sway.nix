@@ -150,7 +150,7 @@
     default_floating_border normal
     
     # Gaps
-    gaps inner 10
+    gaps inner 5
     gaps outer 5
 
   '';
