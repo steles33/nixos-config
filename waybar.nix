@@ -21,7 +21,6 @@ programs.waybar = {
         interval = 1;
         format = "  {}";
         tooltip = "false";
-        # tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "cpu" = {
         format = " : {usage}%  ";
