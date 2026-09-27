@@ -29,5 +29,6 @@ imports = [
   ./fish.nix
   ./vscode.nix
   ./keepassxc.nix
+  ./mc.nix
 ];
 }
