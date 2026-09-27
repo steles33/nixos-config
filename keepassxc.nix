@@ -16,6 +16,6 @@
       SSHAgent = {
         Enabled = true;
       };
-    }
+    };
   };
 }
