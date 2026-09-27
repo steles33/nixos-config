@@ -16,7 +16,7 @@ programs.waybar = {
         interval = 60;
         format = "  {}";
         tooltip = true;
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        # tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "custom/clock-2" = {
         exec = "date +%H:%M:%S";
