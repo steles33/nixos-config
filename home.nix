@@ -28,5 +28,6 @@ imports = [
   ./fuzzel.nix
   ./fish.nix
   ./vscode.nix
+  ./keepassxc.nix
 ];
 }
