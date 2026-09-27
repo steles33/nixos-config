@@ -9,12 +9,11 @@ programs.waybar = {
       spacing =20; # gaps between modules
       output = [ "HDMI-A-2" ];
       modules-left = [ "sway/mode" "network" ];
-      modules-center = [ "custom/clock-1" "sway/workspaces" "wlr/taskbar" "custom/clock-2" "mpd" ];
+      modules-center = [ "clock" "sway/workspaces" "wlr/taskbar" "custom/clock-2" "mpd" ];
       modules-right = [ "cpu" "memory" "disk" "pulseaudio" "bluetooth" "battery" "tray" ];
-      "custom/clock-1" = {
-        exec = "date +'%a %d.%m.%y - CW %V'";
+      "clock" = {
         interval = 60;
-        format = "  {}";
+        format = "  {:%a %d.%m.%y - CW %V}";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "custom/clock-2" = {
