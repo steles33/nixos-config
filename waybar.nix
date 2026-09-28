@@ -59,6 +59,9 @@ programs.waybar = {
         format-icons = [ "" "" "" "" ];
         on-click = "pwvucontrol";
       };
+      "tray" = {
+        padding = 0 5;
+      };
       "battery" = {
         format = "{icon} {capacity}%";
         format-icons = [ "" "" "" "" "" ];
