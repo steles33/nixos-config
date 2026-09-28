@@ -10,7 +10,7 @@ programs.waybar = {
       output = [ "HDMI-A-2" ];
       modules-left = [ "sway/mode" "custom/appmenu" "network" ];
       modules-center = [ "clock" "sway/workspaces" "wlr/taskbar" "mpd" ];
-      modules-right = [ "cpu" "memory" "disk" "pulseaudio" "bluetooth" "battery" ];
+      modules-right = [ "cpu" "memory" "disk" "pulseaudio" "battery" "tray" "custom/power"];
       "custom/appmenu" = {
         tooltip = false;
         format = " ";
@@ -63,6 +63,11 @@ programs.waybar = {
         format = "{icon} {capacity}%";
         format-icons = [ "" "" "" "" "" ];
       };
+      "custom/power" = {
+        format = "󰍃";
+        tooltip = false;
+        on-click = "swaynag -t warning -m 'Exit Sway?' -B 'Yes' 'swaymsg exit'";
+      }
     };
   };
   style = ''
