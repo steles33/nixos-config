@@ -33,7 +33,7 @@ programs.waybar = {
       };
       "wlr/taskbar" = {
         format = "{icon}";
-        icon-size = 20;
+        icon-size = 22;
         tooltip = true;
         tooltip-format = "{title}";
         on-click = "activate";
@@ -61,7 +61,7 @@ programs.waybar = {
       };
       "tray" = {
         padding = "0 5px";
-        icon-size = 20;
+        icon-size = 22;
       };
       "battery" = {
         format = "{icon} {capacity}%";
