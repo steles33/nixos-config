@@ -61,6 +61,7 @@ programs.waybar = {
       };
       "tray" = {
         padding = "0 5px";
+        icon-size = 20;
       };
       "battery" = {
         format = "{icon} {capacity}%";
