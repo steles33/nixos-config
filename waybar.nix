@@ -44,8 +44,7 @@ programs.waybar = {
         format-alt = "{ifname}: {ipaddr}/{cidr}";
       };
       "pulseaudio" = {
-        format = "{icon}  {volume}%";
-        # format-bluetooth = "{icon}  {volume}% {format_source}";
+        format = "{icon} {volume}%";
         format-bluetooth = "{icon}  {volume}%";
         format-muted = "󰝟 muted";
         format-icons = [ "" "" "" "" ];
