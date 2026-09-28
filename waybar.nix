@@ -39,7 +39,7 @@ programs.waybar = {
         on-click = "activate";
         on-click-middle = "close";
         activate-first = "false";
-      }
+      };
       "cpu" = {
         format = ": {usage}% ";
         tooltip = false;
