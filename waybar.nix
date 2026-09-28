@@ -23,16 +23,16 @@ programs.waybar = {
         tooltip = false;
       };
       "cpu" = {
-        format = " : {usage}%  ";
+        format = ": {usage}% ";
         tooltip = false;
       };
       "memory" = {
         interval = 30;
-        format = ": {}%  ";
+        format = ": {}%";
       };
       "disk" = {
         interval = 30;
-        format = ": {percentage_used}%  ";
+        format = ": {percentage_used}%";
       };
       "network" = {
         interval = 1;
