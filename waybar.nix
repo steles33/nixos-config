@@ -8,9 +8,14 @@ programs.waybar = {
       height = 34;
       spacing =14; # gaps between modules
       output = [ "HDMI-A-2" ];
-      modules-left = [ "sway/mode" "network" ];
+      modules-left = [ "sway/mode" "custom/appmenu""network" ];
       modules-center = [ "clock" "sway/workspaces" "wlr/taskbar" "custom/clock-2" "mpd" ];
       modules-right = [ "cpu" "memory" "disk" "pulseaudio" "bluetooth" "battery" "tray" ];
+      "custom/appmenu" = {
+        tooltip = false;
+        format = "";
+        on-click = "xfce4-appfinder";
+      };
       "clock" = {
         interval = 60;
         format = "  {:%a %d.%m.%y - CW %V}";
