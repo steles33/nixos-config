@@ -47,7 +47,8 @@ programs.waybar = {
         format = "{icon}  {volume}%";
         format-bluetooth = "{icon}  {volume}% {format_source}";
         format-muted = "󰝟 muted";
-        format-icons = { default = [ "" "" "" "" ]; };
+        # format-icons = {default = [ "" "" "" "" ];};
+        format-icons = [ "" "" "" "" ];
         on-click = "pwvucontrol";
       };
       "battery" = {
