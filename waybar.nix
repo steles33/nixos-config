@@ -9,7 +9,7 @@ programs.waybar = {
       spacing =14; # gaps between modules
       output = [ "HDMI-A-2" ];
       modules-left = [ "sway/mode" "custom/appmenu" "network" ];
-      modules-center = [ "clock" "sway/workspaces" "wlr/taskbar" "custom/clock-2" "mpd" ];
+      modules-center = [ "clock" "sway/workspaces" "wlr/taskbar" "mpd" ];
       modules-right = [ "cpu" "memory" "disk" "pulseaudio" "bluetooth" "battery" "tray" ];
       "custom/appmenu" = {
         tooltip = false;
@@ -26,18 +26,10 @@ programs.waybar = {
         format-alt = "{ifname}: {ipaddr}/{cidr}";
       };
       "clock" = {
-        # exec = "date +%H:%M:%S";
         interval = 1;
         format = "  {:%H:%M:%S}";
         format-alt = "  {:%a %d.%m.%y - CW %V}";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      };
-      "custom/clock-2" = {
-        exec = "date +%H:%M:%S";
-        interval = 1;
-        format = "  {}";
-        format-alt = "  {:%a %d.%m.%y - CW %V}";
-        tooltip = false;
       };
       "cpu" = {
         format = ": {usage}% ";
