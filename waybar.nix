@@ -13,7 +13,7 @@ programs.waybar = {
       modules-right = [ "cpu" "memory" "disk" "pulseaudio" "bluetooth" "battery" "tray" ];
       "custom/appmenu" = {
         tooltip = false;
-        format = "Whereas disregard ";
+        format = " ";
         on-click = "xfce4-appfinder";
       };
       "network" = {
