@@ -31,6 +31,15 @@ programs.waybar = {
         format-alt = "  {:%a %d.%m.%y - CW %V}";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
+      "wlr/taskbar" = {
+        format = "{icon}";
+        icon-size = 20;
+        tooltip = true;
+        tooltip-format = "{title}";
+        on-click = "activate";
+        on-click-middle = "close";
+        activate-first = "false";
+      }
       "cpu" = {
         format = ": {usage}% ";
         tooltip = false;
