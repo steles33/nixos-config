@@ -53,7 +53,7 @@ programs.waybar = {
         format = ": {percentage_used}%";
       };
       "pulseaudio" = {
-        format = "{icon} {volume}%";
+        format = "{icon}  {volume}%";
         format-bluetooth = "{icon}  {volume}%";
         format-muted = "󰝟 muted";
         format-icons = [ "" "" "" "" ];
