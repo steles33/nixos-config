@@ -8,7 +8,7 @@ programs.waybar = {
       height = 34;
       spacing =14; # gaps between modules
       output = [ "HDMI-A-2" ];
-      modules-left = [ "sway/mode" "custom/appmenu""network" ];
+      modules-left = [ "sway/mode" "custom/appmenu" "network" ];
       modules-center = [ "clock" "sway/workspaces" "wlr/taskbar" "custom/clock-2" "mpd" ];
       modules-right = [ "cpu" "memory" "disk" "pulseaudio" "bluetooth" "battery" "tray" ];
       "custom/appmenu" = {
@@ -16,9 +16,20 @@ programs.waybar = {
         format = "";
         on-click = "xfce4-appfinder";
       };
+      "network" = {
+        interval = 1;
+        format-wifi = "  {signalStrength}% {bandwidthDownBits}  {bandwidthUpBits} ";
+        format-ethernet = "  {bandwidthDownBits}  {bandwidthUpBits} ";
+        tooltip-format = "{essid} via {gwaddr} ";
+        format-linked = "{ifname} (No IP) ";
+        format-disconnected = "󰖪";
+        format-alt = "{ifname}: {ipaddr}/{cidr}";
+      };
       "clock" = {
-        interval = 60;
-        format = "  {:%a %d.%m.%y - CW %V}";
+        exec = "date +%H:%M:%S";
+        interval = 1;
+        format = "  {}";
+        format-alt = "  {:%a %d.%m.%y - CW %V}";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "custom/clock-2" = {
@@ -38,15 +49,6 @@ programs.waybar = {
       "disk" = {
         interval = 30;
         format = ": {percentage_used}%";
-      };
-      "network" = {
-        interval = 1;
-        format-wifi = "  {signalStrength}% {bandwidthDownBits}  {bandwidthUpBits} ";
-        format-ethernet = "  {bandwidthDownBits}  {bandwidthUpBits} ";
-        tooltip-format = "{essid} via {gwaddr} ";
-        format-linked = "{ifname} (No IP) ";
-        format-disconnected = "󰖪";
-        format-alt = "{ifname}: {ipaddr}/{cidr}";
       };
       "pulseaudio" = {
         format = "{icon} {volume}%";
