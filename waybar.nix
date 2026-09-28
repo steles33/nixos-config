@@ -64,7 +64,7 @@ programs.waybar = {
         format-icons = [ "" "" "" "" "" ];
       };
       "custom/power" = {
-        format = "󰍃";
+        format = "󰍃 ";
         tooltip = false;
         on-click = "swaynag -t warning -m 'Exit Sway?' -B 'Yes' 'swaymsg exit'";
       };
