@@ -13,7 +13,7 @@ programs.waybar = {
       modules-right = [ "cpu" "memory" "disk" "pulseaudio" "tray" "custom/power"];
       "custom/appmenu" = {
         tooltip = false;
-        format = " ";
+        format = "  Start";
         on-click = "xfce4-appfinder";
       };
       "network" = {
