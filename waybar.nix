@@ -60,7 +60,7 @@ programs.waybar = {
         on-click = "pwvucontrol";
       };
       "tray" = {
-        padding = 0 5;
+        padding = "0 5px";
       };
       "battery" = {
         format = "{icon} {capacity}%";
