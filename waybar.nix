@@ -28,7 +28,7 @@ programs.waybar = {
       "clock" = {
         # exec = "date +%H:%M:%S";
         interval = 1;
-        format = "  {%H:%M:%S}";
+        format = "  {:%H:%M:%S}";
         format-alt = "  {:%a %d.%m.%y - CW %V}";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
@@ -36,6 +36,7 @@ programs.waybar = {
         exec = "date +%H:%M:%S";
         interval = 1;
         format = "  {}";
+        format-alt = "  {:%a %d.%m.%y - CW %V}";
         tooltip = false;
       };
       "cpu" = {
