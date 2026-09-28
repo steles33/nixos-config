@@ -67,7 +67,7 @@ programs.waybar = {
   };
   style = ''
     * {
-      font-family: roboto-mono, FontAwesome;
+      font-family: Roboto, FontAwesome;
       font-size: 22px;
     }
       window#waybar {
