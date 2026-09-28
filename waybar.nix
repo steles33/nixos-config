@@ -45,7 +45,8 @@ programs.waybar = {
       };
       "pulseaudio" = {
         format = "{icon}  {volume}%";
-        format-bluetooth = "{icon}  {volume}% {format_source}";
+        # format-bluetooth = "{icon}  {volume}% {format_source}";
+        format-bluetooth = "{icon}  {volume}%";
         format-muted = "󰝟 muted";
         format-icons = [ "" "" "" "" ];
         on-click = "pwvucontrol";
