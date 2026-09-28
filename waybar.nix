@@ -26,9 +26,9 @@ programs.waybar = {
         format-alt = "{ifname}: {ipaddr}/{cidr}";
       };
       "clock" = {
-        exec = "date +%H:%M:%S";
+        # exec = "date +%H:%M:%S";
         interval = 1;
-        format = "  {}";
+        format = "  {%H:%M:%S}";
         format-alt = "  {:%a %d.%m.%y - CW %V}";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
