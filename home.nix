@@ -30,5 +30,6 @@ imports = [
   ./vscode.nix
   ./keepassxc.nix
   ./mc.nix
+  ./solaar.nix
 ];
 }
