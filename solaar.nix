@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  programs.solaar = {
+  options.programs.solaar = {
     enable = true;
     package = pkgs.solaar;
     userService = { 
