@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   # Install the Solaar package
@@ -19,4 +19,15 @@
       WantedBy = [ "graphical-session.target" ];
     };
   };
+  # ... keep your existing home.packages and systemd.user.services here ...
+
+  home.file.".config/solaar/config.yaml".text = ''
+    # Solaar Configuration
+    # You can find the exact keys by running Solaar once, 
+    # changing settings, and looking at the generated file.
+    
+    # Example settings:
+    # battery_icons: symbolic
+    # window_hide_on_start: true
+  '';
 }
