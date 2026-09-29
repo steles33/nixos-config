@@ -6,7 +6,7 @@
     userService = { 
       enable = true;
       window = "hide";
-      batteryIcons = "solaar";
+      batteryIcons = "symbolic";
       };
     };
   }
