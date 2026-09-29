@@ -27,7 +27,7 @@
     # changing settings, and looking at the generated file.
     
     # Example settings:
-    # battery_icons: symbolic
-    # window_hide_on_start: true
+    battery_icons: symbolic
+    window_hide_on_start: true
   '';
 }
