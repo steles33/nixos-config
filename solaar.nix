@@ -5,7 +5,7 @@
     package = pkgs.solaar;
     userService = { 
       enable = true;
-      window = "hide";
+      window = "show";
       batteryIcons = {
         type = "symbolic";
         };
