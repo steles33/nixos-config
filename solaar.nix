@@ -6,7 +6,9 @@
     userService = { 
       enable = true;
       window = "hide";
-      batteryIcons = "symbolic";
+      batteryIcons = {
+        type = "symbolic";
+        };
       };
     };
   }
