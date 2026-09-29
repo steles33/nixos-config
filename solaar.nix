@@ -9,5 +9,4 @@
       batteryIcons = "solaar";
       };
     };
-  };
-}
+  }
