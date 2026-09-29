@@ -134,6 +134,6 @@
 
   # Logitech Unifying Receiver
   hardware.logitech.wireless.enable = true;
-  services.solaar.enable = true;
+  # services.solaar.enable = true;
   services.udev.packages = [ pkgs.solaar ];
 }
