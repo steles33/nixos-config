@@ -83,6 +83,7 @@
     usb-modeswitch-data
     roboto
     roboto-mono
+    solaar
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
