@@ -130,4 +130,7 @@
     RemainAfterExit = true;
     };
   };
+
+  # Logitech Unifying Receiver
+  hardware.logitech.wireless.enable = true;
 }
