@@ -143,7 +143,7 @@
           command = "floating enable, resize set width 700 px height 500 px, move position center"; 
           }
       { criteria = { app_id = "About Mozilla Firefox"; };
-          command = floating = "enable";
+          command = "floating = enable";
           }
     ];
   };
