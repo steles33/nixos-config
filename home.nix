@@ -22,6 +22,7 @@ home.packages = with pkgs; [
 imports = [
   ./sway.nix
   ./swaylock.nix
+  ./swayidle.nix
   ./waybar.nix
   ./wallpaper.nix
   ./foot.nix
