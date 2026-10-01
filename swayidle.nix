@@ -6,18 +6,15 @@
     events = [
       { 
         event = "timeout"; 
-        timeout = 300; 
-        command = "${pkgs.swaylock}/bin/swaylock"; 
+        command = "swayidle -w timeout 300 '${pkgs.swaylock}/bin/swaylock'"; 
       }
       { 
         event = "timeout"; 
-        timeout = 600; 
-        command = "swaymsg 'output * dpms off'"; 
+        command = "swayidle -w timeout 600 'swaymsg \"output * dpms off\"'"; 
       }
       { 
         event = "timeout"; 
-        timeout = 900; 
-        command = "systemctl suspend"; 
+        command = "swayidle -w timeout 900 'systemctl suspend'"; 
       }
       { 
         event = "before-sleep"; 
