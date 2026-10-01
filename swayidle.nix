@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
+
 {
   services.swayidle = {
-  enable = true;
-  events = {
-    timeout = [
+    enable = true;
+    events = [
       { 
         timeout = 300; 
         command = "${pkgs.swaylock}/bin/swaylock"; 
@@ -16,13 +16,10 @@
         timeout = 900; 
         command = "systemctl suspend"; 
       }
-    ];
-    event = "before-sleep" [
       { 
+        event = "before-sleep"; 
         command = "${pkgs.swaylock}/bin/swaylock"; 
       }
     ];
   };
-};
-
 }
