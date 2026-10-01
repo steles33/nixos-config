@@ -17,7 +17,7 @@
         command = "systemctl suspend"; 
       }
     ];
-    event = "before sleep" [
+    event = "before-sleep" [
       { 
         command = "${pkgs.swaylock}/bin/swaylock"; 
       }
