@@ -2,7 +2,7 @@
 {
   services.swayidle = {
   enable = true;
-  config = {
+  events = {
     timeout = [
       { 
         timeout = 300; 
