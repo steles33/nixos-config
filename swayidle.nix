@@ -5,11 +5,17 @@
   enable = true;
   config = {
     timeout = [
-      { timeout = 300; command = "${pkgs.swaylock}/bin/swaylock"; }
-      { timeout = 600; command = "swaymsg 'output * dpms off'"; }
-      { timeout = 900; command = "systemctl suspend"; }
+      {
+        timeout = 300; command = "${pkgs.swaylock}/bin/swaylock"; 
+      }
+      { 
+        timeout = 600; command = "swaymsg 'output * dpms off'"; 
+      }
+      { 
+        timeout = 900; command = "systemctl suspend"; 
+      }
     ];
-    before_sleep = [ { command = "${pkgs.swaylock}/bin/swaylock"; } ];
+      before_sleep = [ { command = "${pkgs.swaylock}/bin/swaylock"; } ];
     };
   };
 }
