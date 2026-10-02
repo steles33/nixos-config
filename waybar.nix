@@ -93,10 +93,6 @@ programs.waybar = {
         color: #89b4fa;
         background: #313244;
       }
-      #clock,
-      #network,
-      #pulseaudio,
-      #battery,
   '';
 };
 }
