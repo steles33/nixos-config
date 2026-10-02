@@ -96,9 +96,7 @@ programs.waybar = {
       #clock,
       #network,
       #pulseaudio,
-      #battery {
-        padding: 0 10px;
-      }
+      #battery,
   '';
 };
 }
