@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       main = {
-        font = "monospace:size=18";
+        font = "monospace:size=16";
         lines = 15;
         auto-select = false;
       };
