@@ -3,7 +3,7 @@
 let
   # Reference the wallpaper from the nixos-artwork package
   # Available options: simple-blue, simple-red, binary-blue, binary-black, waterfall, watersplash, etc.
-  wallpaperPath = "${pkgs.nixos-artwork.wallpapers.simple-light-gray}/share/backgrounds/nixos/nix-wallpaper-simple-light-gray.png";
+  wallpaperPath = "${pkgs.nixos-artwork.wallpapers.NixOS-Gradient-grey}/share/backgrounds/nixos/NixOS-Gradient-grey.png";
 in
 
 {
