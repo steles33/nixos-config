@@ -4,7 +4,7 @@
     enable = true;
     interactiveShellInit = ''
       function fish_prompt
-        set_color brblack
+        set_color white
         date "+[%H:%M:%S] "
         set_color blue
         printf "%s" (whoami)"@"(hostname -s)" "
