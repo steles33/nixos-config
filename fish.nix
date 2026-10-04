@@ -2,8 +2,10 @@
 {
  programs.fish = {
     enable = true;
+    interactive = {
+      greeting = "";
+      };
     interactiveShellInit = ''
-      set --erase fish_greeting
       function fish_prompt
         # set_color white
         # date "+[%H:%M:%S] "
