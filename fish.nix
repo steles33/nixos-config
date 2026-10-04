@@ -2,10 +2,11 @@
 {
  programs.fish = {
     enable = true;
-    interactive = {
-      greeting = "";
-      };
     interactiveShellInit = ''
+      function fish_greeting
+        echo "Welcome, $USER!"
+        echo "Today is "(date "+%A, %B %d")
+      end
       function fish_prompt
         # set_color white
         # date "+[%H:%M:%S] "
