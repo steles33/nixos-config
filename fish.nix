@@ -3,7 +3,16 @@
  programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      set fish_greeting
+      function fish_prompt
+        set_color brblack
+        date "+[%H:%M:%S] "
+        set_color blue
+        printf "%s" (whoami)"@"(hostname -s)" "
+        set_color green
+        printf "%s" (prompt_pwd)
+        set_color normal
+        printf "\n> "
+      end  
     '';
     shellAliases = {
       ll = "ls -lah";
