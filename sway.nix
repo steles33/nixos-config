@@ -133,7 +133,7 @@
         xkb_numlock = "enabled";
       };
     };
-    fonts.names = [ "monospace" ];
+    # fonts.names = [ "monospace" ];
     # fonts.size = "16";
     window.commands = [
       { criteria = { app_id = "firefox"; };
