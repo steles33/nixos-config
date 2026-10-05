@@ -103,7 +103,7 @@
   security.polkit.enable = true;
   
   # Greeter
-  services.displayManager.regreet.enable = true;
+  programs.regreet.enable = true;
 
   # Bluetooth
   hardware.bluetooth = {
