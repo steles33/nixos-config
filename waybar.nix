@@ -74,7 +74,7 @@ programs.waybar = {
       };
     };
   };
-  style = ''
+  #style = ''
     #* {
     #  font-family: Roboto, FontAwesome;
     #  font-size: 22px;
@@ -82,17 +82,17 @@ programs.waybar = {
     #  window#waybar {
     #    background: rgba(24, 24, 37, 0.95);
     #    color: #cdd6f4;
-      }
+    #  }
       #workspaces button {
-        padding: 0 8px;
+    #    padding: 0 8px;
      #   color: #a6adc8;
-        background: transparent;
-        border: none;
-      }
+     #   background: transparent;
+      #  border: none;
+      #}
       #workspaces button.focused {
     #    color: #89b4fa;
     #    background: #313244;
-      }
-  '';
-};
-}
+    #  }
+  #'';
+#};
+#}
