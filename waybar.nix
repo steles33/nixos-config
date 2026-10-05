@@ -94,5 +94,5 @@ programs.waybar = {
     #    background: #313244;
     #  }
   #'';
-#};
+  };
 }
