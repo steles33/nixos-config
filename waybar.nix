@@ -95,4 +95,4 @@ programs.waybar = {
     #  }
   #'';
 #};
-#}
+}
