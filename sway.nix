@@ -156,7 +156,7 @@
     
     # Gaps
     gaps inner 5
-    gaps outer 5
+    gaps outer 50
 
   '';
 };
