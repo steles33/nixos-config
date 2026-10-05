@@ -9,7 +9,7 @@
       };
       GUI = {
         AdvancedSettings = true;
-        ApplicationTheme = "dark";
+        # ApplicationTheme = "dark";
         CompactMode = true;
         HidePasswords = true;
       };
