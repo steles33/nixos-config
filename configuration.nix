@@ -95,9 +95,9 @@
     stylix = {
     enable = true;
 
-    polarity = "dark";
+    #polarity = "dark";
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/cupertino.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/windows-10-light.yaml";
 
     #targets = {
     #foot.enable = true;
