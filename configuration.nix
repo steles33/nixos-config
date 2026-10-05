@@ -97,7 +97,7 @@
 
     #polarity = "dark";
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/windows-10-light.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
 
     #targets = {
     #foot.enable = true;
