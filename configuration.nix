@@ -97,7 +97,7 @@
 
     #polarity = "dark";
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/papercolor-light.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     #targets = {
     #foot.enable = true;
