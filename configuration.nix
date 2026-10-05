@@ -90,6 +90,45 @@
     nerd-fonts.symbols-only
   ];
 
+  # stylix module
+
+    stylix = {
+    enable = true;
+
+    polarity = "dark";
+
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+
+    fonts = {
+      monospace = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
+      };
+
+      sansSerif = {
+        package = pkgs.roboto;
+        name = "Roboto";
+      };
+
+      serif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
+      };
+
+      emoji = {
+        package = pkgs.noto-fonts-color-emoji;
+        name = "Noto Color Emoji";
+      };
+
+      sizes = {
+        applications = 11;
+        terminal = 12;
+        desktop = 11;
+        popups = 11;
+      };
+    };
+  };
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 

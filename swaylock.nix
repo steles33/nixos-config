@@ -4,12 +4,12 @@
     enable = true;
 
     settings = {
-      color = "1e1e2e";
-      inside-color = "313244";
-      ring-color = "89b4fa";
-      text-color = "cdd6f4";
-      key-hl-color = "f38ba8";
-      bs-hl-color = "eba0ac";
+      # color = "1e1e2e";
+      # inside-color = "313244";
+      # ring-color = "89b4fa";
+      # text-color = "cdd6f4";
+      # key-hl-color = "f38ba8";
+      # bs-hl-color = "eba0ac";
 
       indicator = true;
       clock = true;
