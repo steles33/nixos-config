@@ -99,13 +99,13 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-    targets = {
-    foot.enable = true;
-    sway.enable = true;
-    swaylock.enable = true;
-    waybar.enable = true;
-    fuzzel.enable = true;
-    };
+    #targets = {
+    #foot.enable = true;
+    #sway.enable = true;
+    #swaylock.enable = true;
+    #waybar.enable = true;
+    #fuzzel.enable = true;
+    #};
 
     fonts = {
       monospace = {
