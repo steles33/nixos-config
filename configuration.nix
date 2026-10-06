@@ -100,14 +100,14 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-    stylix.icons = {
+    icons = {
     enable = true;
     package = pkgs.papirus-icon-theme;
     dark = "Papirus-Dark";
     light = "Papirus-Light";
     };
 
-    stylix.cursor = {
+    cursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Ice";
     size = 24;
