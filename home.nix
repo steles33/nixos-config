@@ -18,6 +18,7 @@ home.packages = with pkgs; [
   pwvucontrol
   blueman
   xfce4-appfinder
+  pcmanfm-qt
 ];
 imports = [
   ./sway.nix
