@@ -85,6 +85,11 @@
     roboto
     roboto-mono
     solaar
+    kdePackages.dolphin # This is the actual dolphin package
+    kdePackages.kio # needed since 25.11
+    kdePackages.kio-fuse #to mount remote filesystems via FUSE
+    kdePackages.kio-extras #extra protocols support (sftp, fish and more)
+    kdePackages.qtsvg # Dolphin Icon Fix
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
@@ -189,4 +194,7 @@
   hardware.logitech.wireless.enable = true;
   # services.solaar.enable = true;
   services.udev.packages = [ pkgs.solaar ];
+
+  # Dolphin Open Menu Fix
+  environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 }
