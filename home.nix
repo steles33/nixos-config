@@ -33,5 +33,6 @@ imports = [
   ./keepassxc.nix
   ./mc.nix
   ./solaar.nix
+  ./user_directories.nix
 ];
 }
