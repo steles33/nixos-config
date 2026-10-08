@@ -2,6 +2,7 @@
 home.username = "steles33";
 home.homeDirectory = "/home/steles33";
 home.stateVersion = "26.05";
+stylix.targets.kde.enable = true;
 home.packages = with pkgs; [
   waybar
   foot
