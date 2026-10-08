@@ -197,4 +197,5 @@
 
   # Dolphin Open Menu Fix
   environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+  environment.sessionVariables = { QT_QPA_PLATFORMTHEME = "qt6ct"; };
 }
