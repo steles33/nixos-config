@@ -29,7 +29,7 @@
     # Hide the OS choice for bootloaders.
     # It's still possible to open the bootloader list by pressing any key
     # It will just not appear on screen unless a key is pressed
-    loader.timeout = 5;
+    loader.timeout = 3;
   };
 
   # Enable networking + Define your hostname
@@ -121,7 +121,7 @@
     stylix = {
     enable = true;
 
-    polarity = "light";
+    polarity = "dark";
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
