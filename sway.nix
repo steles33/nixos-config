@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-  stylix.targets.sway.fonts.override = "JetBrainsMono Nerd Font:size=10";
   wayland.windowManager.sway = {
   enable = true;
   wrapperFeatures.gtk = true;
