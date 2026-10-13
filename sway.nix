@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  stylix.targets.sway.fonts.enable = false; # Disable Stylix font management for Sway
   wayland.windowManager.sway = {
   enable = true;
   wrapperFeatures.gtk = true;
@@ -133,8 +134,8 @@
         xkb_numlock = "enabled";
       };
     };
-    # fonts.names = [ "monospace" ];
-    # fonts.size = "16";
+    fonts.names = [ "monospace" ];
+    fonts.size = "16";
     window.commands = [
       { criteria = { app_id = "firefox"; };
           command = "border none"; 
