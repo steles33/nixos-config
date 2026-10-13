@@ -103,7 +103,7 @@
 
     polarity = "light";
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
 
     icons = {
     enable = true;
