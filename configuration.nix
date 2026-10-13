@@ -120,7 +120,7 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.pro-font;
+        package = pkgs.nerd-fonts.profont;
         name = "ProFont Nerd Font";
       };
 
