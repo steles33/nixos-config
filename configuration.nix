@@ -128,7 +128,7 @@
     targets.plymouth = {
       enable = true;
       logo = ./NixOS.png;
-      logoAnimated = false;
+      # logoAnimated = false;
     };
 
     icons = {
