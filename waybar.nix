@@ -13,7 +13,7 @@ programs.waybar = {
       modules-right = [ "cpu" "memory" "disk" "pulseaudio" "clock" "tray" "custom/power"];
       "custom/appmenu" = {
         tooltip = false;
-        format = "   Start";
+        format = "  Start";
         on-click = "xfce4-appfinder";
       };
       "network" = {
@@ -27,8 +27,8 @@ programs.waybar = {
       };
       "clock" = {
         interval = 1;
-        format = "  {:%H:%M:%S}";
-        format-alt = "  {:%a %d.%m.%y - CW %V}";
+        format = " {:%H:%M:%S}";
+        format-alt = " {:%a %d.%m.%y - CW %V}";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "wlr/taskbar" = {
