@@ -143,7 +143,7 @@
         applications = 14;
         terminal = 16;
         desktop = 14;
-        popups = 12;
+        popups = 18;
       };
     };
   };
