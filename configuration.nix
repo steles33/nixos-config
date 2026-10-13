@@ -20,7 +20,7 @@
       extraConfig = ''
         [Daemon]
         ShowDelay=0
-      '':
+      '';
     };
     # Enable "Silent boot"
     consoleLogLevel = 3;
