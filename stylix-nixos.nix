@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  stylix.targets.kde = !isCatppuccin;
+  stylix.targets.kde = isCatppuccin;
 }
