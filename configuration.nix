@@ -120,8 +120,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.roboto-mono;
-        name = "RobotoMono Nerd Font";
+        package = pkgs.nerd-fonts.shuretech-mono;
+        name = "ShureTechMono Nerd Font";
       };
 
       sansSerif = {
