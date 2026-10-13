@@ -127,7 +127,7 @@
 
     polarity = "dark";
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
 
     targets.plymouth = {
       enable = true;
