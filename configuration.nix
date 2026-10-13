@@ -120,8 +120,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.roboto-mono;
+        name = "RobotoMono Nerd Font";
       };
 
       sansSerif = {
