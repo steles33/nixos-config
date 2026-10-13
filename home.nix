@@ -33,5 +33,6 @@ imports = [
   ./mc.nix
   ./solaar.nix
   ./user_directories.nix
+  ./stylix-nixos.nix
 ];
 }
