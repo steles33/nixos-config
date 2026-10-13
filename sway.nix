@@ -136,9 +136,9 @@
     # fonts.names = [ "monospace" ];
     # fonts.size = "16";
     window.commands = [
-      { criteria = { app_id = "firefox"; };
-          command = "border none"; 
-          }
+      # { criteria = { app_id = "firefox"; };
+          # command = "border none"; 
+          # }
       { criteria = { app_id = "xfce4-appfinder"; }; 
           command = "floating enable, resize set width 700 px height 500 px, move position center"; 
           }
