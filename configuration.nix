@@ -16,7 +16,7 @@
   boot = {
     plymouth = {
       enable = true;
-      theme = "bgrt";
+      # theme = "bgrt";
     };
     # Enable "Silent boot"
     consoleLogLevel = 3;
@@ -124,6 +124,12 @@
     polarity = "light";
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+
+    targets.plymouth = {
+      enable = true;
+      logo = ./NixOS.png;
+      logoAnimated = false;
+    };
 
     icons = {
     enable = true;
