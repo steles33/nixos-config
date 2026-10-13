@@ -1,10 +1,12 @@
 { config, pkgs, ... }:
 {
+    stylix.targets.fuzzel.fonts.enable = false; # Disable Stylix font management for Fuzzel
     programs.fuzzel = {
     enable = true;
     settings = {
       main = {
-        # font = "monospace:size=16";
+        font = "monospace:size=16";
+        # font = "FiraCode Nerd Font:size=30";
         lines = 15;
         auto-select = false;
       };
