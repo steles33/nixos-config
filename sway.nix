@@ -134,7 +134,7 @@
       };
     };
     fonts.names = [ "monospace" ];
-    fonts.size = "16";
+    # fonts.size = "16";
     window.commands = [
       { criteria = { app_id = "firefox"; };
           command = "border none"; 
