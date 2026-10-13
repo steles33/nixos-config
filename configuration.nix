@@ -125,7 +125,7 @@
     stylix = {
     enable = true;
 
-    polarity = "dark";
+    polarity = "light";
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
 
