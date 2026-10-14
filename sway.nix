@@ -149,8 +149,6 @@
     ];
   };
     extraConfig = ''
-    # Smart Gaps
-    smart_gaps on
     # Tiled windows: no border or title bar
     default_border pixel 5
     # Floating windows: show the normal title bar
@@ -158,6 +156,7 @@
     # Gaps
     gaps inner 5
     gaps outer 5
+    smart_gaps on
   '';
 };
 }
