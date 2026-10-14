@@ -149,14 +149,14 @@
 
     icons = {
     enable = true;
-    package = pkgs.papirus-icon-theme;
-    dark = "Papirus-Dark";
-    light = "Papirus-Light";
+    package = pkgs.kdePackages.breeze-icons;
+    dark = "breeze-dark";
+    light = "breeze";
     };
 
     cursor = {
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
+    package = pkgs.breeze-icons;
+    name = "breeze_cursors";
     size = 24;
     };
 
@@ -189,7 +189,14 @@
       };
     };
   };
-
+  # GTK theming
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = breeze;
+      package = pkgs.breeze-icons;
+    };
+  };
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
