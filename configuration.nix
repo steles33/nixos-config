@@ -193,7 +193,7 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = breeze;
+      name = "breeze";
       package = pkgs.breeze-icons;
     };
   };
