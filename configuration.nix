@@ -124,9 +124,10 @@
     lxqt.lximage-qt
     pcmanfm-qt
     vlc
+    font-manager
   ];
   fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
+    # nerd-fonts.jetbrains-mono
     nerd-fonts.symbols-only
   ];
 
