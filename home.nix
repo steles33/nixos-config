@@ -28,7 +28,7 @@ imports = [
   ./foot.nix
   ./fuzzel.nix
   ./fish.nix
-  ./vscode.nix
+  ./vscodium.nix
   ./keepassxc.nix
   ./mc.nix
   ./solaar.nix
