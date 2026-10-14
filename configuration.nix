@@ -136,8 +136,8 @@
     stylix = {
     enable = true;
     polarity = "light";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
     # polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte-blue.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     opacity.terminal = 0.75;
