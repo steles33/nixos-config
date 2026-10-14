@@ -135,7 +135,8 @@
     stylix = {
     enable = true;
     polarity = "light";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     opacity.terminal = 0.75;
     targets.plymouth = { enable = true; logo = ./NixOS.png; };
     icons = { enable = true; package = pkgs.kdePackages.breeze-icons; dark = "breeze-dark"; light = "breeze"; };
