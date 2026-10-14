@@ -115,6 +115,7 @@
     kdePackages.kio-extras #extra protocols support (sftp, fish and more)
     kdePackages.qtsvg # Dolphin Icon Fix
     lxqt.lximage-qt
+    pcmanfm-qt
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
