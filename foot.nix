@@ -7,7 +7,7 @@
       # font = "JetBrainsMono Nerd Font:size=16";
       pad = "2x2";
     };
-    colors = {
+    colors-dark = {
       alpha = 0.75;
     };
     # colors-dark = {
