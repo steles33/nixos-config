@@ -135,6 +135,8 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
 
+    opacity.terminal = 0.75;
+
     targets.plymouth = {
       enable = true;
       logo = ./NixOS.png;
