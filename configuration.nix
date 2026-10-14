@@ -114,6 +114,7 @@
     kdePackages.kio-fuse #to mount remote filesystems via FUSE
     kdePackages.kio-extras #extra protocols support (sftp, fish and more)
     kdePackages.qtsvg # Dolphin Icon Fix
+    lxqt.lximage-qt
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
