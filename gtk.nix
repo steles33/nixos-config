@@ -1,11 +1,9 @@
 {config, pkgs, ... }: {
-  home-manager.users.steles33 = {
-    gtk = {
-      enable = true;
-      iconTheme = {
-        name = "breeze";
-        package = pkgs.kdePackages.breeze-icons;
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "breeze";
+      package = pkgs.kdePackages.breeze-icons;
       };
     };
-  };
 }
