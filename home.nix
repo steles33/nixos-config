@@ -34,5 +34,6 @@ imports = [
   ./solaar.nix
   ./user_directories.nix
   #./stylix-nixos.nix
+  ./gtk.nix
 ];
 }
