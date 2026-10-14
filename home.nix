@@ -33,7 +33,7 @@ imports = [
   ./mc.nix
   ./solaar.nix
   ./user_directories.nix
-  #./stylix-nixos.nix
-  ./gtk.nix
+  # ./stylix-nixos.nix
+  # ./gtk.nix
 ];
 }
