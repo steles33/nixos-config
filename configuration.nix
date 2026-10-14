@@ -19,7 +19,7 @@
       # theme = "bgrt";
       extraConfig = ''
         [Daemon]
-        ShowDelay=0
+        ShowDelay=5
       '';
     };
     # Enable "Silent boot"
@@ -134,58 +134,34 @@
 
     stylix = {
     enable = true;
-
     polarity = "light";
-
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
-
     opacity.terminal = 0.75;
-
-    targets.plymouth = {
-      enable = true;
-      logo = ./NixOS.png;
-      # logoAnimated = false;
-    };
-
-    icons = {
-    enable = true;
-    package = pkgs.kdePackages.breeze-icons;
-    dark = "breeze-dark";
-    light = "breeze";
-    };
-
-    cursor = {
-    package = pkgs.kdePackages.breeze-icons;
-    name = "breeze_cursors";
-    size = 24;
-    };
-
+    targets.plymouth = { enable = true; logo = ./NixOS.png; };
+    icons = { enable = true; package = pkgs.kdePackages.breeze-icons; dark = "breeze-dark"; light = "breeze"; };
+    cursor = { package = pkgs.kdePackages.breeze-icons; name = "breeze_cursors"; size = 24; };
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.roboto-mono;
         name = "RobotoMono Nerd Font";
       };
-
       sansSerif = {
         package = pkgs.roboto;
         name = "Roboto";
       };
-
       serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
+        package = pkgs.roboto;
+        name = "Roboto";
       };
-
       emoji = {
         package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
-
       sizes = {
-        applications = 15;
-        terminal = 15;
-        desktop = 15;
-        popups = 15;
+        applications = 14;
+        terminal = 14;
+        desktop = 14;
+        popups = 16;
       };
     };
   };
