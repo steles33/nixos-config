@@ -155,7 +155,7 @@
     };
 
     cursor = {
-    package = pkgs.breeze-icons;
+    package = pkgs.kdePackages.breeze-icons;
     name = "breeze_cursors";
     size = 24;
     };

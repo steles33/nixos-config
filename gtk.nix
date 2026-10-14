@@ -4,7 +4,7 @@
       enable = true;
       iconTheme = {
         name = "breeze";
-        package = pkgs.breeze-icons;
+        package = pkgs.kdePackages.breeze-icons;
       };
     };
   };
