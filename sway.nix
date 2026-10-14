@@ -21,7 +21,7 @@
         "${modifier}+o" = "exec dolphin --split";
         "${modifier}+k" = "exec krusader --left ~ --right ~";
         "${modifier}+m" = "exec elisa";
-        "${modifier}+c" = "exec code";
+        "${modifier}+c" = "exec codium";
 
         # Screenshots
         "${modifier}+p" = "exec grim -g \"$(slurp)\" - | swappy -f -";
