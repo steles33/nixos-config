@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
-  programs.vscode = {
+  programs.vscodium = {
   enable = true;
-  package = pkgs.vscode; 
+  package = pkgs.vscodium; 
   profiles.default = {
     extensions = with pkgs.vscode-extensions; [ jnoortheen.nix-ide ];
     #userSettings = {
