@@ -5,6 +5,7 @@
   settings = {
     main = {
       # font = "JetBrainsMono Nerd Font:size=16";
+      alpha = 0.75;
       pad = "2x2";
     };
     # colors-dark = {
