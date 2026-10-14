@@ -189,14 +189,6 @@
       };
     };
   };
-  # GTK theming
-  gtk = {
-    enable = true;
-    iconTheme = {
-      name = "breeze";
-      package = pkgs.breeze-icons;
-    };
-  };
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
