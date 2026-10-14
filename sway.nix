@@ -16,11 +16,12 @@
 
         # Apps
         "${modifier}+i" = "exec firefox";
-        "${modifier}+c" = "exec thunderbird";
+        "${modifier}+u" = "exec thunderbird";
         "${modifier}+n" = "exec signal-desktop";
         "${modifier}+o" = "exec dolphin";
         "${modifier}+k" = "exec krusader --left ~ --right ~";
         "${modifier}+m" = "exec elisa";
+        "${modifier}+c" = "exec code";
 
         # Screenshots
         "${modifier}+p" = "exec grim -g \"$(slurp)\" - | swappy -f -";
