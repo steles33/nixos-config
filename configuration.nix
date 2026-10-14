@@ -119,6 +119,7 @@
     kdePackages.qtsvg # Dolphin Icon Fix
     lxqt.lximage-qt
     pcmanfm-qt
+    vlc
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
