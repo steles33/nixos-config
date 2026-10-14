@@ -138,7 +138,7 @@
     # polarity = "light";
     polarity = "dark";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-machiato.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     opacity.terminal = 0.75;
     targets.plymouth = { enable = true; logo = ./NixOS.png; };
