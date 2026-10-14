@@ -109,6 +109,7 @@
     roboto
     roboto-mono
     solaar
+    pipewire
     zip
     unzip
     p7zip
