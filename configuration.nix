@@ -144,7 +144,7 @@
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/tokio-night.yaml";
     #manual colors of catpuccin latte
     # base16Scheme = {
-     #base00 = "#eff1f5"; # base
+      #base00 = "#eff1f5"; # base
       #base01 = "#e6e9ef"; # mantle
       #base02 = "#ccd0da"; # surface0
       #base03 = "#bcc0cc"; # surface1
@@ -189,7 +189,7 @@
       };
       sizes = {
         applications = 14;
-        terminal = 14;
+        terminal = 15;
         desktop = 14;
         popups = 16;
       };
