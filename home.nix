@@ -7,8 +7,8 @@ home.packages = with pkgs; [
   # foot
   # fuzzel
   firefox
-  vscodium
-  keepassxc
+  # vscodium
+  # keepassxc
   wl-clipboard
   grim
   slurp
