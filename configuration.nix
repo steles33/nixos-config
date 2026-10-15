@@ -163,7 +163,7 @@
     opacity = {
       applications = 1.0;
       terminal = 1.0;
-      desktop = 0.0;
+      desktop = 0.5;
       popups = 1.0;
     };
     targets.plymouth = { enable = true; logo = ./NixOS.png; };
