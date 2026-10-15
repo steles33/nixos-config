@@ -125,6 +125,7 @@
     lxqt.lximage-qt
     pcmanfm-qt
     vlc
+    thunar
     font-manager
   ];
   fonts.packages = with pkgs; [
