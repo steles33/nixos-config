@@ -3,12 +3,7 @@ home.username = "steles33";
 home.homeDirectory = "/home/steles33";
 home.stateVersion = "26.05";
 home.packages = with pkgs; [
-  # waybar
-  # foot
-  # fuzzel
   firefox
-  # vscodium
-  # keepassxc
   wl-clipboard
   grim
   slurp
@@ -33,8 +28,5 @@ imports = [
   ./mc.nix
   ./solaar.nix
   ./user_directories.nix
-  # ./hardware-tweaks.nix
-  # ./stylix-nixos.nix
-  # ./gtk.nix
 ];
 }
