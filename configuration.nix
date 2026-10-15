@@ -136,11 +136,16 @@
     stylix = {
     enable = true;
     polarity = "light";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
     # polarity = "dark";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
-    opacity.terminal = 0.75;
+    opacity = {
+      applications = 1.0;
+      terminal = 0.7;
+      desktop = 1,0;
+      popups = 1.0;
+    };
     targets.plymouth = { enable = true; logo = ./NixOS.png; };
     icons = { enable = true; package = pkgs.kdePackages.breeze-icons; dark = "breeze-dark"; light = "breeze"; };
     cursor = { package = pkgs.kdePackages.breeze-icons; name = "breeze_cursors"; size = 24; };
