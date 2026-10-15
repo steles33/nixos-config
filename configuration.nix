@@ -135,10 +135,11 @@
 
     stylix = {
     enable = true;
-    #polarity = "light";
+    polarity = "light";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light.yaml";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/default-dark.yaml";
-    polarity = "dark";
+    #polarity = "dark";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/tokio-night.yaml";
