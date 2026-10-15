@@ -3,7 +3,7 @@ home.username = "steles33";
 home.homeDirectory = "/home/steles33";
 home.stateVersion = "26.05";
 home.packages = with pkgs; [
-  waybar
+  # waybar
   foot
   fuzzel
   firefox
