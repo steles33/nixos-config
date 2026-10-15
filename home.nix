@@ -4,8 +4,8 @@ home.homeDirectory = "/home/steles33";
 home.stateVersion = "26.05";
 home.packages = with pkgs; [
   # waybar
-  foot
-  fuzzel
+  # foot
+  # fuzzel
   firefox
   vscodium
   keepassxc
