@@ -135,13 +135,13 @@
 
     stylix = {
     enable = true;
-    polarity = "light";
+    #polarity = "light";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light.yaml";
+    #base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-light.yaml";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/default-dark.yaml";
-    #polarity = "dark";
+    polarity = "dark";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
-    #base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/tokio-night.yaml";
     #manual colors of catpuccin latte
     # base16Scheme = {
@@ -164,7 +164,7 @@
     #};
     opacity = {
       applications = 1.0;
-      terminal = 1.0;
+      terminal = 0.7;
       desktop = 0.7;
       popups = 1.0;
     };
