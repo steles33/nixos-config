@@ -27,8 +27,8 @@
     # changing settings, and looking at the generated file.
     
     # Example settings:
-    # battery_icons: symbolic
-    # window_hide_on_start: true
+    battery_icons: solaar
+    window_hide_on_start: true
     - 1.1.20
 - _NAME: MX Keys for Business
   _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, scroll-ratchet-torque, smart-shift,
