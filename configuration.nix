@@ -125,7 +125,6 @@
     lxqt.lximage-qt
     pcmanfm-qt
     vlc
-    thunar
     font-manager
   ];
   fonts.packages = with pkgs; [
@@ -238,4 +237,7 @@
   environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   # environment.sessionVariables = { QT_QPA_PLATFORMTHEME = "qt5ct"; };
   services.udisks2.enable = true;
+  # You can extend Thunar's functionalities by adding to your configuration.nix
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.tumbler.enable = true; # Thumbnail support for images
 }
