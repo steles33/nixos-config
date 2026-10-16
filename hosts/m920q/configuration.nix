@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       ../../hosts/m920q/hardware-configuration.nix
       ../../modules/system/hardware-tweaks.nix
+      ../../modules/system/theme/stylix.nix
     ];
 
   # Bootloader.
