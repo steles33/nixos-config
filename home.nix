@@ -27,6 +27,7 @@ imports = [
   ./modules/home/apps/keepassxc.nix
   ./modules/home/apps/mc.nix
   ./modules/home/apps/solaar.nix
+  ./modules/home/apps/user_directories.nix
   #./modules/home/apps/thunar.nix
 ];
 }
