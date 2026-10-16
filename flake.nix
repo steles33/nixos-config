@@ -24,7 +24,7 @@
       system = "x86_64-linux";
 
       modules = [
-        ./configuration.nix
+        ./hosts/m920q/configuration.nix
 
         stylix.nixosModules.stylix
 

@@ -3,8 +3,9 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./hardware-tweaks.nix
+      ../../hosts/m920q/hardware-configuration.nix
+      ../../modules/system/hardware-tweaks.nix
+      ../../modules/system/user_directories.nix
     ];
 
   # Bootloader.
