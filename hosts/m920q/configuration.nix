@@ -172,7 +172,7 @@
       desktop = 0.7;
       popups = 1.0;
     };
-    targets.plymouth = { enable = true; logo = ./NixOS.png; };
+    targets.plymouth = { enable = true; logo = ../../NixOS.png; };
     icons = { enable = true; package = pkgs.kdePackages.breeze-icons; dark = "breeze-dark"; light = "breeze"; };
     cursor = { package = pkgs.kdePackages.breeze-icons; name = "breeze_cursors"; size = 24; };
     fonts = {
