@@ -28,6 +28,6 @@ imports = [
   ./mc.nix
   ./solaar.nix
   ./user_directories.nix
-  ./thunar.nix
+  #./thunar.nix
 ];
 }
