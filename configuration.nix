@@ -126,6 +126,9 @@
     pcmanfm-qt
     vlc
     font-manager
+    thunar
+    thunar-archive-plugin
+    thunar-volman
   ];
   fonts.packages = with pkgs; [
     # nerd-fonts.jetbrains-mono
