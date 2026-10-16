@@ -12,7 +12,7 @@
     };
     Service = {
       # --window=hide ensures it starts minimized in the Waybar tray
-      ExecStart = "${pkgs.solaar}/bin/solaar --window=hide";
+      ExecStart = "${pkgs.solaar}/bin/solaar --window=hide --battery-icons solaar";
       Restart = "on-failure";
     };
     Install = {
