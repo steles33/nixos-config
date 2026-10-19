@@ -3,6 +3,7 @@
  programs.fish = {
     enable = true;
     interactiveShellInit = ''
+      fastfetch
       set fish_greeting # Disable greeting
       function fish_prompt
         # set_color white

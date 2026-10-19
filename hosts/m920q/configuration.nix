@@ -101,7 +101,6 @@
     wget
     git
     htop
-    fastfetch
     tldr
     usbutils
     usb-modeswitch
