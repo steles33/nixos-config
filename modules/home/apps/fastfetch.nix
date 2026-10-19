@@ -4,7 +4,7 @@
   enable = true;
   settings = {
     logo = {
-      source = "nixos_old";
+      source = "nixos";
       padding = {
         right = 1;
       };
