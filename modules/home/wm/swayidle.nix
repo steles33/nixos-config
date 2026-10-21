@@ -22,10 +22,11 @@
       command = display "off";
       resumeCommand = display "on";
     }
-    {
-      timeout = 315;
-      command = "${pkgs.systemd}/bin/systemctl suspend";
-    }
+    # comment out to avoid music play is stopping after suspend
+    #{
+      #timeout = 315;
+      #command = "${pkgs.systemd}/bin/systemctl suspend";
+    #}
   ];
   events = {
       "before-sleep" = "${display "off"}; ${lock}";
