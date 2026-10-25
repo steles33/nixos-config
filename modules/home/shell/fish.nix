@@ -23,8 +23,8 @@
       la = "ls -lha";
       ".." = "cd ..";
       gs = "git status";
-      # gitupd = "git add . && git commit -m "update" && git status"
-      # rebuild = "sudo nixos-rebuild switch --flake .#m920q";
+      gitupd = "git add . && git commit -m "update" && git push && git status";
+      rebuild = "sudo nixos-rebuild switch --flake .#m920q";
     };
   };
 }
