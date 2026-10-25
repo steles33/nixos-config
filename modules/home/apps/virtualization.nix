@@ -6,7 +6,7 @@
   programs.virt-manager.enable = true;
 
   # Install optional but recommended tools for VM management
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
     virt-viewer
     bridge-utils
   ];
