@@ -19,9 +19,10 @@
       end  
     '';
     shellAliases = {
-      ll = "ls -lah";
-      la = "ls -A";
+      ll = "ls -lh";
+      la = "ls -lha";
       ".." = "cd ..";
+      gs = "git status";
       # gitupd = "git add . && git commit -m "update" && git status"
       # rebuild = "sudo nixos-rebuild switch --flake .#m920q";
     };
