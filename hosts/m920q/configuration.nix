@@ -179,4 +179,10 @@
   programs.xfconf.enable = true; # If xfce is not used as desktop and therefore xfconf is not enabled, preference changes are discarded. In that case enable the xfconf program manually to be able to save preferences
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
+  
+  # Enable libvirtd daemon
+  virtualisation.libvirtd.enable = true;
+
+  # Enable the Virt-Manager GUI
+  programs.virt-manager.enable = true;
 }
