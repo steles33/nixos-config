@@ -29,6 +29,7 @@ imports = [
   ./modules/home/apps/solaar.nix
   ./modules/home/apps/user_directories.nix
   ./modules/home/apps/fastfetch.nix
+  ./modules/home/apps/virtualization.nix
   #./modules/home/apps/thunar.nix
 ];
 }

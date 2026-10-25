@@ -74,7 +74,7 @@
   users.users."steles33" = {
     isNormalUser = true;
     description = "steles33";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     shell = pkgs.fish;
     packages = with pkgs; [];
   };
