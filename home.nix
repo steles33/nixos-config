@@ -13,6 +13,7 @@ home.packages = with pkgs; [
   pwvucontrol
   blueman
   xfce4-appfinder
+  syncthing
 ];
 imports = [
   ./modules/home/wm/sway.nix

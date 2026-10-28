@@ -6,6 +6,7 @@
       ../../hosts/m920q/hardware-configuration.nix
       ../../modules/system/hardware-tweaks.nix
       ../../modules/system/stylix.nix
+      ../../modules/system/syncthing.nix
     ];
 
   # Bootloader.
