@@ -9,8 +9,8 @@
     settings = {
       gui = {
         address = "127.0.0.1:8384";
-        user = "your-chosen-username";
-        password = "your-chosen-password";
+        #user = "your-chosen-username";
+        #password = "your-chosen-password";
       };
     };
   };
