@@ -1,19 +1,21 @@
 { config, pkgs, ... }:
 
 {
-  # 1. Enable the Syncthing functionality (creates the templates)
+  # 1. Enable the base functionality
   services.syncthing.enable = true;
 
-  # 2. Explicitly kill the generic system-wide service that is crashing
+  # 2. Disable the generic system-wide service that crashes
   systemd.services.syncthing.enable = false;
 
-  # 3. Explicitly enable the service for your specific user
-  systemd.services."syncthing@steles33" = {
-    enable = true;
-    wantedBy = [ "multi-user.target" ];
-  };
+  # 3. Use the "systemd.user" or a simple "wantedBy" 
+  # to ensure the instance for your user is active.
+  # Since the template already exists, we just tell systemd to start it.
+  systemd.targets.multi-user.target.after = [ "syncthing@steles33.service" ];
+  
+  # This is the cleanest way to ensure the user instance is enabled
+  # without overwriting the ExecStart/Unit file settings.
+  systemd.services."syncthing@steles33".wantedBy = [ "multi-user.target" ];
 
-  # Firewall rules for Syncthing
   networking.firewall.allowedTCPPorts = [ 22000 ];
   networking.firewall.allowedUDPPorts = [ 21027 ];
 }
