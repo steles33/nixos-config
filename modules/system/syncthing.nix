@@ -1,20 +1,19 @@
 { config, pkgs, ... }:
+
 {
-  services.syncthing = {
+  # 1. Enable the Syncthing functionality (creates the templates)
+  services.syncthing.enable = true;
+
+  # 2. Explicitly kill the generic system-wide service that is crashing
+  systemd.services.syncthing.enable = false;
+
+  # 3. Explicitly enable the service for your specific user
+  systemd.services."syncthing@steles33" = {
     enable = true;
-    user = "steles33";
-    
-    # This explicitly defines the settings in the config file 
-    # so they align with the startup flags
-    settings = {
-      gui = {
-        address = "127.0.0.1:8384";
-        #user = "your-chosen-username";
-        #password = "your-chosen-password";
-      };
-    };
+    wantedBy = [ "multi-user.target" ];
   };
 
+  # Firewall rules for Syncthing
   networking.firewall.allowedTCPPorts = [ 22000 ];
   networking.firewall.allowedUDPPorts = [ 21027 ];
 }
