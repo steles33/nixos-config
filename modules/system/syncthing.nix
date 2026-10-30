@@ -7,6 +7,7 @@
     dataDir = "/home/steles33/.config/syncthing";
   };
 
-  systemd.user.services.syncthing.enable = false;
-  };
+  # This is the correct way to "activate" the template for a specific user
+  # without overwriting the service definition.
+  systemd.WantedTargets = [ "syncthing@steles33.service" ];
 }
