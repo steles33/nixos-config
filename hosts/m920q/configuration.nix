@@ -186,4 +186,13 @@
 
   # Enable the Virt-Manager GUI
   programs.virt-manager.enable = true;
+
+  networking.firewall = {
+    enable = true;
+    # 22000 is for sync traffic, 8384 is for the Web GUI
+    allowedTCPPorts = [ 22000 8384 ];
+    allowedUDPPorts = [ 22000 ];
+  };
+}
+
 }
