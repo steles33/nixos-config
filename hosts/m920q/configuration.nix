@@ -194,5 +194,3 @@
     allowedUDPPorts = [ 22000 ];
   };
 }
-
-}
