@@ -11,6 +11,6 @@
     # This stores the config, keys, and index database
     dataDir = "/home/steles33/.config/syncthing";
 
-    openFirewall = true;
+    # openFirewall = true;
   };
 }
