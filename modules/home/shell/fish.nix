@@ -11,7 +11,7 @@
         set_color blue
         printf "%s" (whoami)"@"(hostname -s)" "
         set_color green
-        printf "%s" (prompt_pwd)
+        printf "%s" (pwd)
         set_color red
         printf '%s' (fish_git_prompt)
         set_color normal
