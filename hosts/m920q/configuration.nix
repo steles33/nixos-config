@@ -101,10 +101,12 @@
   services = {
     openssh.enable = true;
     blueman.enable = true;
-    udisks2.enable = true;
     gvfs.enable = true;
     tumbler.enable = true;
     udev.packages = [ pkgs.solaar ];
+    udisks2 = {
+      enable = true;
+      mountonMedia = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
