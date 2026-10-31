@@ -6,8 +6,8 @@
       fastfetch
       set fish_greeting # Disable greeting
       function fish_prompt
-        # set_color white
-        # date "+[%H:%M:%S] "
+        set_color white
+        date "+[%H:%M:%S] "
         set_color blue
         printf "%s" (whoami)"@"(hostname -s)" "
         set_color green
