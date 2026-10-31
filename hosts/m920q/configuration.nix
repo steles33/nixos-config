@@ -107,6 +107,7 @@
     udisks2 = {
       enable = true;
       mountonMedia = true;
+    };
     pipewire = {
       enable = true;
       alsa.enable = true;
