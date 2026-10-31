@@ -4,8 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
-    home-manager.url = "github:nix-community/home-manager/release-26.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
@@ -13,26 +15,20 @@
     };
   };
 
-  outputs = { 
-    self,
-    nixpkgs,
-    home-manager,
-    stylix,
-    ... 
-  }: {
+  outputs = { self, nixpkgs, home-manager, stylix, ... }: {
     nixosConfigurations.m920q = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
       modules = [
         ./hosts/m920q/configuration.nix
-
         stylix.nixosModules.stylix
-
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.steles33 = import ./home.nix;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.steles33 = import ./home.nix;
+          };
         }
       ];
     };
