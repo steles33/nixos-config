@@ -106,7 +106,7 @@
     udev.packages = [ pkgs.solaar ];
     udisks2 = {
       enable = true;
-      mountonMedia = true;
+      mountOnMedia = true;
     };
     pipewire = {
       enable = true;
