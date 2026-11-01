@@ -129,6 +129,10 @@
     rtkit.enable = true;
   };
 
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+  enable = true;
+  onBoot = "start";
+  };
+
   system.stateVersion = "26.05";
 }
