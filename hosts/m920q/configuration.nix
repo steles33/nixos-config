@@ -85,7 +85,7 @@
 
   environment = {
     systemPackages = with pkgs; [
-      wget git htop tldr usbutils usb-modeswitch usb-modeswitch-data
+      wget vim htop tldr usbutils usb-modeswitch usb-modeswitch-data
       roboto roboto-mono solaar pipewire zip unzip p7zip
       kdePackages.okular kdePackages.kate kdePackages.breeze kdePackages.breeze-icons 
       kdePackages.breeze-gtk lxqt.lximage-qt pcmanfm-qt vlc 
