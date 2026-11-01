@@ -141,12 +141,12 @@ systemd.services.libvirt-default-network = {
   serviceConfig = {
     Type = "oneshot";
     RemainAfterExit = true;
-    ExecStart = "${pkgs.bash}/bin/bash ${pkgs.substituteAll {
-      src = ./scripts/libvirt-network-setup.sh;
+    ExecStart = "${pkgs.bash}/bin/bash ${pkgs.replaceVars ./scripts/libvirt-network-setup.sh {
       libvirt = pkgs.libvirt;
     }}";
   };
 };
+
 
 
   system.stateVersion = "26.05";
