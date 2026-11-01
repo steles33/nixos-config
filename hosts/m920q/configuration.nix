@@ -141,14 +141,29 @@ systemd.services.libvirt-default-network = {
   serviceConfig = {
     Type = "oneshot";
     RemainAfterExit = true;
-    ExecStart = ''
-      ${pkgs.libvirt}/bin/virsh net-define /etc/libvirt/qemu/networks/default.xml || true
+    ExecStart = "${pkgs.bash}/bin/bash -c ''
+      set -e
+      # Define the default network
+      ${pkgs.libvirt}/bin/virsh net-define <(cat <<'NETXML'
+      <network>
+        <name>default</name>
+        <forward mode='nat'/>
+        <bridge name='virbr0' stp='on' delay='0'/>
+        <ip address='192.168.122.1' netmask='255.255.255.0'>
+          <dhcp>
+            <range start='192.168.122.2' end='192.168.122.254'/>
+          </dhcp>
+        </ip>
+      </network>
+      NETXML
+      ) || true
+      
+      # Start and autostart the network
       ${pkgs.libvirt}/bin/virsh net-start default || true
-      ${pkgs.libvirt}/bin/virsh net-autostart default
+      ${pkgs.libvirt}/bin/virsh net-autostart default || true
     '';
   };
 };
-
 
   system.stateVersion = "26.05";
 }
