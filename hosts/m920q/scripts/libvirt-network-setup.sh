@@ -1,8 +1,10 @@
 #!/bin/bash
 set -e
 
+VIRSH="@libvirt@/bin/virsh"
+
 # Define and start the default network
-virsh net-define - <<'EOF' || true
+$VIRSH net-define - <<'EOF' || true
 <network>
   <name>default</name>
   <forward mode='nat'/>
@@ -15,5 +17,5 @@ virsh net-define - <<'EOF' || true
 </network>
 EOF
 
-virsh net-start default || true
-virsh net-autostart default || true
+$VIRSH net-start default || true
+$VIRSH net-autostart default || true
