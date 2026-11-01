@@ -129,10 +129,40 @@
     rtkit.enable = true;
   };
 
-  virtualisation.libvirtd = {
-  enable = true;
-  onBoot = "start";
+  virtualisation = {
+  libvirtd = {
+    enable = true;
+    onBoot = "start";
+    networks = {
+      default = {
+        settings = {
+          uuid = "00000000-0000-0000-0000-000000000001";
+          name = "default";
+          forward = {
+            mode = "nat";
+          };
+          bridge = {
+            name = "virbr0";
+            stp = "on";
+            delay = "0";
+          };
+          ip = [
+            {
+              address = "192.168.122.1";
+              netmask = "255.255.255.0";
+              dhcp = {
+                start = "192.168.122.2";
+                end = "192.168.122.254";
+              };
+            }
+          ];
+        };
+        active = true;
+        autostart = true;
+      };
+    };
   };
+};
 
   system.stateVersion = "26.05";
 }
