@@ -37,6 +37,7 @@
     ./modules/home/apps/fastfetch.nix
     ./modules/home/apps/virtualization.nix
     ./modules/home/apps/git.nix
+    ./modules/home/apps/mpd_ncmpcpp.nix
     # ./modules/home/apps/thunar.nix
   ];
 }
