@@ -70,7 +70,8 @@
   # Install mpd and ncmpcpp as user packages
   home.packages = with pkgs; [
     mpd
-    ncmpcpp
+    # ncmpcpp
+    (ncmpcpp.override { visualizerSupport = true; })
     mpc
   ];
 
