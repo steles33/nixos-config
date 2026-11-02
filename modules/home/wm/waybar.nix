@@ -48,7 +48,7 @@ programs.waybar = {
         interval = 5;
         on-click = "mpc toggle";
         consume-icons = { on = " "; };
-        random-icons = { off = "<span color=\"#f53c3c\"></span> "; on = " " };
+        random-icons = { off = "<span color=\"#f53c3c\"></span> "; on = " "; };
         repeat-icons = { on = " " };
         single-icons = { on = "1 " };
         state-icons = { paused = ""; playing = "" };
