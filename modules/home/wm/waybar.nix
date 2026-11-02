@@ -40,6 +40,21 @@ programs.waybar = {
         on-click-middle = "close";
         activate-first = "false";
       };
+      "mpd" = {
+        format = "{stateIcon}  {artist} - {title}";
+        format-disconnected = "  Disconnected";
+        format-stopped = "  Stopped";
+        unknown-tag = "N/A";
+        interval = 5;
+        on-click = "mpc toggle";
+        consume-icons = { on = " "; };
+        random-icons = { off = "<span color=\"#f53c3c\"></span> "; on = " " };
+        repeat-icons = { on = " " };
+        single-icons = { on = "1 " };
+        state-icons = { paused = ""; playing = "" };
+        tooltip-format = "MPD (connected) - Time: {elapsedTime:%M:%S}/{totalTime:%M:%S}";
+        tooltip-format-disconnected = "MPD (disconnected)";
+      };
       "cpu" = {
         format = ": {usage}% ";
         tooltip = false;
