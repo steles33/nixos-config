@@ -71,7 +71,7 @@
   home.packages = with pkgs; [
     mpd
     ncmpcpp
-    mpc-cli
+    mpc
   ];
 
   # Optional: Create a systemd user service for mpd
