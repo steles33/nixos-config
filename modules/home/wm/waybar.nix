@@ -98,13 +98,13 @@ programs.waybar = {
     #    background: rgba(24, 24, 37, 0.95);
     #    color: #cdd6f4;
     #  }
-      #workspaces button {
+    #workspaces button {
     #    padding: 0 8px;
-     #   color: #a6adc8;
-     #   background: transparent;
-      #  border: none;
-      #}
-      #workspaces button.focused {
+    #    color: #a6adc8;
+    #    background: transparent;
+    #    border: none;
+    #}
+    #workspaces button.focused {
     #    color: #89b4fa;
     #    background: #313244;
     #  }
