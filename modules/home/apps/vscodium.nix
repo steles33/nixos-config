@@ -4,7 +4,8 @@
   enable = true;
   package = pkgs.vscodium; 
   profiles.default = {
-    extensions = with pkgs.vscode-extensions; [ jnoortheen.nix-ide ];
+    # extensions = with pkgs.vscode-extensions; [ jnoortheen.nix-ide ];
+    pkgs.vscode-extensions.kamadorueda.alejandra;
     #userSettings = {
     #  "workbench.colorTheme" = "Light 2026";
     #  "editor.fontSize" = 20;
