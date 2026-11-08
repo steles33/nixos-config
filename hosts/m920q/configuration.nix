@@ -89,7 +89,7 @@
       roboto roboto-mono solaar pipewire zip unzip p7zip
       kdePackages.okular kdePackages.kate kdePackages.breeze kdePackages.breeze-icons 
       kdePackages.breeze-gtk lxqt.lximage-qt pcmanfm-qt vlc 
-      font-manager thunar thunar-archive-plugin thunar-volman
+      font-manager thunar thunar-archive-plugin thunar-volman alejandra
     ];
     etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   };
