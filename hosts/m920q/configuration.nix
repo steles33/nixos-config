@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ../../hosts/m920q/hardware-configuration.nix
     ../../modules/system/hardware-tweaks.nix
@@ -26,7 +29,7 @@
     };
     consoleLogLevel = 3;
     initrd.verbose = false;
-    kernelParams = [ "quiet" "rd.udev.log_level=3" "rd.systemd.show_status=auto" ];
+    kernelParams = ["quiet" "rd.udev.log_level=3" "rd.systemd.show_status=auto"];
   };
 
   networking = {
@@ -34,8 +37,8 @@
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 22000 8384 ];
-      allowedUDPPorts = [ 22000 ];
+      allowedTCPPorts = [22000 8384];
+      allowedUDPPorts = [22000];
     };
   };
 
@@ -65,7 +68,7 @@
   users.users.steles33 = {
     isNormalUser = true;
     description = "steles33";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = ["networkmanager" "wheel" "libvirtd"];
     shell = pkgs.fish;
   };
 
@@ -76,32 +79,56 @@
     virt-manager.enable = true;
     sway = {
       enable = true;
-      extraPackages = with pkgs; [ swaylock swayidle swaybg ];
+      extraPackages = with pkgs; [swaylock swayidle swaybg];
     };
   };
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment = {
     systemPackages = with pkgs; [
-      wget vim htop btop tldr usbutils usb-modeswitch usb-modeswitch-data
-      roboto roboto-mono solaar pipewire zip unzip p7zip
-      kdePackages.okular kdePackages.kate kdePackages.breeze kdePackages.breeze-icons 
-      kdePackages.breeze-gtk lxqt.lximage-qt pcmanfm-qt vlc 
-      font-manager thunar thunar-archive-plugin thunar-volman alejandra
+      wget
+      vim
+      htop
+      btop
+      tldr
+      usbutils
+      usb-modeswitch
+      usb-modeswitch-data
+      roboto
+      roboto-mono
+      solaar
+      pipewire
+      zip
+      unzip
+      p7zip
+      kdePackages.okular
+      kdePackages.kate
+      kdePackages.breeze
+      kdePackages.breeze-icons
+      kdePackages.breeze-gtk
+      lxqt.lximage-qt
+      pcmanfm-qt
+      vlc
+      font-manager
+      thunar
+      thunar-archive-plugin
+      thunar-volman
+      libreoffice
+      alejandra
     ];
     etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   };
 
-  fonts.packages = with pkgs; [ nerd-fonts.symbols-only ];
+  fonts.packages = with pkgs; [nerd-fonts.symbols-only];
 
   services = {
     openssh.enable = true;
     blueman.enable = true;
     gvfs.enable = true;
     tumbler.enable = true;
-    udev.packages = [ pkgs.solaar ];
+    udev.packages = [pkgs.solaar];
     udisks2 = {
       enable = true;
       mountOnMedia = true;
@@ -128,24 +155,22 @@
   };
 
   virtualisation.libvirtd = {
-  enable = true;
-  onBoot = "start";
-};
-
-systemd.services.libvirt-default-network = {
-  description = "Ensure libvirt default network is active";
-  after = [ "libvirtd.service" ];
-  wantedBy = [ "multi-user.target" ];
-  serviceConfig = {
-    Type = "oneshot";
-    RemainAfterExit = true;
-    ExecStart = "${pkgs.bash}/bin/bash ${pkgs.replaceVars ./scripts/libvirt-network-setup.sh {
-      libvirt = pkgs.libvirt;
-    }}";
+    enable = true;
+    onBoot = "start";
   };
-};
 
-
+  systemd.services.libvirt-default-network = {
+    description = "Ensure libvirt default network is active";
+    after = ["libvirtd.service"];
+    wantedBy = ["multi-user.target"];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStart = "${pkgs.bash}/bin/bash ${pkgs.replaceVars ./scripts/libvirt-network-setup.sh {
+        libvirt = pkgs.libvirt;
+      }}";
+    };
+  };
 
   system.stateVersion = "26.05";
 }
