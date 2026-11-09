@@ -91,7 +91,6 @@
       wget
       vim
       htop
-      btop
       tldr
       usbutils
       usb-modeswitch
