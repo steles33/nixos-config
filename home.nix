@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home = {
     username = "steles33";
     homeDirectory = "/home/steles33";
@@ -38,6 +40,7 @@
     ./modules/home/apps/virtualization.nix
     ./modules/home/apps/git.nix
     ./modules/home/apps/mpd_ncmpcpp.nix
+    ./modules/home/apps/btop.nix
     # ./modules/home/apps/thunar.nix
   ];
 }
