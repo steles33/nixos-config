@@ -40,9 +40,6 @@
       desktop = 0.7;
       popups = 1.0;
     };
-    targets.btop = {
-      enable = true;
-    };
     targets.plymouth = {
       enable = true;
       logo = ../../NixOS.png;
