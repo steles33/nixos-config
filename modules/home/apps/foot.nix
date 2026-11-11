@@ -17,6 +17,7 @@
       # };
       cursor = {
         style = "underline";
+        underline-thickness = 1.5;
         blink = "yes";
       };
     };
