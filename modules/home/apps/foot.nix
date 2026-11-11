@@ -16,7 +16,7 @@
       # foreground = "cdd6f4";
       # };
       cursor = {
-        style = "beam";
+        style = "underline";
         blink = "yes";
       };
     };
