@@ -93,6 +93,7 @@
       htop
       btop
       tldr
+      tree
       usbutils
       usb-modeswitch
       usb-modeswitch-data
