@@ -1,13 +1,16 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.sway = {
-  enable = true;
-  wrapperFeatures.gtk = true;
-  config = rec {
-    modifier = "Mod4";
-    terminal = "foot";
-    menu = "fuzzel";
-    keybindings = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+    config = rec {
+      modifier = "Mod4";
+      terminal = "foot";
+      menu = "fuzzel";
+      keybindings = {
         # Add or replace bindings
         "${modifier}+Return" = "exec ${terminal}";
         "${modifier}+d" = "exec ${menu}";
@@ -28,7 +31,7 @@
         "${modifier}+p" = "exec grim -g \"$(slurp)\" - | swappy -f -";
 
         # Notifications
-        "${modifier}+Shift+n"= "exec swaync-client -t -sw";
+        "${modifier}+Shift+n" = "exec swaync-client -t -sw";
 
         # Lock
         "${modifier}+l" = "exec swaylock -f -c 1e1e2e";
@@ -86,18 +89,15 @@
 
         # Resize Mode
         "${modifier}+r" = "mode resize";
-        
+
         # Media keys
-        "XF86AudioRaiseVolume" =
-          "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
-        "XF86AudioLowerVolume" =
-          "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
-        "XF86AudioMute" =
-          "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
+        "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
+        "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
       };
 
       modes = {
-          resize = {
+        resize = {
           h = "resize shrink width 10 px";
           j = "resize grow height 10 px";
           k = "resize shrink height 10 px";
@@ -113,7 +113,7 @@
         };
       };
 
-    startup = [
+      startup = [
         # {
         #   command = "swaybg -i ~/Pictures/NixOS-Gradient-grey.png -m fill";
         #   always = true;
@@ -123,41 +123,43 @@
           always = true;
         }
       ];
-    bars = [
+      bars = [
         {
           command = "waybar";
         }
-      ];  
-    input = {
-      "*" = {
-        xkb_layout = "de";
-        xkb_variant = "nodeadkeys";
-        xkb_numlock = "enabled";
+      ];
+      input = {
+        "*" = {
+          xkb_layout = "de";
+          xkb_variant = "nodeadkeys";
+          xkb_numlock = "enabled";
+        };
       };
+      # fonts.names = [ "monospace" ];
+      # fonts.size = "16";
+      window.commands = [
+        # { criteria = { app_id = "firefox"; };
+        # command = "border none";
+        # }
+        {
+          criteria = {app_id = "xfce4-appfinder";};
+          command = "floating enable, resize set width 700 px height 500 px, move position center";
+        }
+        {
+          criteria = {app_id = "About Mozilla Firefox";};
+          command = "floating enable";
+        }
+      ];
     };
-    # fonts.names = [ "monospace" ];
-    # fonts.size = "16";
-    window.commands = [
-      # { criteria = { app_id = "firefox"; };
-          # command = "border none"; 
-          # }
-      { criteria = { app_id = "xfce4-appfinder"; }; 
-          command = "floating enable, resize set width 700 px height 500 px, move position center"; 
-          }
-      { criteria = { app_id = "About Mozilla Firefox"; };
-          command = "floating = enable";
-          }
-    ];
-  };
     extraConfig = ''
-    # Tiled windows: no border or title bar
-    default_border pixel 5
-    # Floating windows: show the normal title bar
-    default_floating_border normal
-    # Gaps
-    gaps inner 3
-    gaps outer 3
-    smart_gaps on
-  '';
-};
+      # Tiled windows: no border or title bar
+      default_border pixel 5
+      # Floating windows: show the normal title bar
+      default_floating_border normal
+      # Gaps
+      gaps inner 3
+      gaps outer 3
+      smart_gaps on
+    '';
+  };
 }
