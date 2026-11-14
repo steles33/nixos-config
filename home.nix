@@ -42,6 +42,5 @@
     ./modules/home/apps/mpd_ncmpcpp.nix
     ./modules/home/apps/btop.nix
     ./modules/home/apps/calibre.nix
-    # ./modules/home/apps/thunar.nix
   ];
 }
