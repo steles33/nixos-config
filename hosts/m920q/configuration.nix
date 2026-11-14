@@ -60,10 +60,6 @@
   };
 
   console.keyMap = "de-latin1-nodeadkeys";
-  services.xserver.xkb = {
-    layout = "de";
-    variant = "nodeadkeys";
-  };
 
   users.users.steles33 = {
     isNormalUser = true;
@@ -125,6 +121,10 @@
   fonts.packages = with pkgs; [nerd-fonts.symbols-only];
 
   services = {
+    xserver.xkb = {
+      layout = "de";
+      variant = "nodeadkeys";
+    };
     openssh.enable = true;
     blueman.enable = true;
     gvfs.enable = true;
