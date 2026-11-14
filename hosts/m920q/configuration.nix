@@ -109,9 +109,6 @@
       pcmanfm-qt
       vlc
       font-manager
-      thunar
-      thunar-archive-plugin
-      thunar-volman
       libreoffice
       alejandra
     ];
