@@ -51,7 +51,7 @@
       light = "breeze";
     };
     cursor = {
-      package = pkgs.kdePackages.breeze-icons;
+      package = pkgs.kdePackages.breeze;
       name = "breeze_cursors";
       size = 24;
     };
