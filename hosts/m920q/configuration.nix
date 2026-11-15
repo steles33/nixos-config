@@ -72,7 +72,7 @@
 
   programs = {
     fish.enable = true;
-    regreet.enable = true;
+    # regreet.enable = true;
     xfconf.enable = true;
     virt-manager.enable = true;
     sway = {
@@ -129,6 +129,7 @@
       layout = "de";
       variant = "nodeadkeys";
     };
+    displayManager.regreet.enable = true;
     openssh.enable = true;
     blueman.enable = true;
     gvfs.enable = true;
