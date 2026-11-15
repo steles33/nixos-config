@@ -1,6 +1,9 @@
-{ config, pkgs, ... }:
 {
- programs.fish = {
+  config,
+  pkgs,
+  ...
+}: {
+  programs.fish = {
     enable = true;
     interactiveShellInit = ''
       # fastfetch
@@ -22,6 +25,7 @@
       ll = "ls -lh";
       la = "ls -lha";
       ".." = "cd ..";
+      ff = "fastfetch";
       gs = "git status";
       gu = "git add . && git commit -m \"update\" && git push && git status";
       rebuild = "sudo nixos-rebuild switch --flake .#m920q";
