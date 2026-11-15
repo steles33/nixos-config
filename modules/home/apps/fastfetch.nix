@@ -7,7 +7,7 @@
     enable = true;
     settings = {
       logo = {
-        type = "small";
+        type = "normal";
       };
       general = {
         detectVersion = false;
@@ -48,6 +48,7 @@
           type = "packages";
           key = "Packages     ";
         }
+        fmhyfmhyvdsbvdsf
         {
           type = "memory";
           key = "Memory       ";
