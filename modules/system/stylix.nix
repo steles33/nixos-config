@@ -40,9 +40,14 @@
       desktop = 0.7;
       popups = 1.0;
     };
-    targets.plymouth = {
-      enable = true;
-      logo = ../../NixOS.png;
+    targets = {
+      plymouth = {
+        enable = true;
+        logo = ../../NixOS.png;
+      };
+      rofi = {
+        enable = false;
+      };
     };
     icons = {
       enable = true;
