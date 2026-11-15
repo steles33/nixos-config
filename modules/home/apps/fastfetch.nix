@@ -45,6 +45,10 @@
           key = "Desktop      ";
         }
         {
+          type = "packages";
+          key = "Packages     ";
+        }
+        {
           type = "memory";
           key = "Memory       ";
         }
