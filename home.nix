@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  stylix.targets.rofi.enable = false;
   home = {
     username = "steles33";
     homeDirectory = "/home/steles33";

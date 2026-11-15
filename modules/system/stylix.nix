@@ -45,9 +45,6 @@
         enable = true;
         logo = ../../NixOS.png;
       };
-      rofi = {
-        enable = false;
-      };
     };
     icons = {
       enable = true;
