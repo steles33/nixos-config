@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.fastfetch = {
     enable = true;
     settings = {
@@ -50,6 +52,14 @@
           type = "disk";
           key = "Storage (/)  ";
           folders = "/";
+        }
+        {
+          type = "localip";
+          key = "Local IP     ";
+        }
+        {
+          type = "publicip";
+          key = "Public IP    ";
         }
         {
           type = "colors";
