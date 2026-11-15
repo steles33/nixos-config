@@ -7,7 +7,8 @@
     enable = true;
     settings = {
       logo = {
-        type = "builtin";
+        # type = "builtin";
+        type = "small";
       };
       general = {
         detectVersion = false;
