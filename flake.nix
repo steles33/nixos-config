@@ -2,20 +2,26 @@
   description = "My Declarative NixOS System";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix = {
-      url = "github:nix-community/stylix/release-26.05";
+      url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }: {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    stylix,
+    ...
+  }: {
     nixosConfigurations.m920q = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
