@@ -48,7 +48,6 @@
           type = "packages";
           key = "Packages     ";
         }
-        fmhyfmhyvdsbvdsf
         {
           type = "memory";
           key = "Memory       ";
