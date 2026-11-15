@@ -16,6 +16,7 @@
       systemd-boot = {
         enable = true;
         graceful = true;
+        configurationLimit = 5;
       };
       efi.canTouchEfiVariables = true;
       timeout = 3;
@@ -82,6 +83,11 @@
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
 
   environment = {
     systemPackages = with pkgs; [
