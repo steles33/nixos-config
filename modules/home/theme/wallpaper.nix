@@ -1,13 +1,14 @@
-{ config, pkgs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   # Reference the wallpaper from the nixos-artwork package
   # Available options: simple-blue, simple-red, binary-blue, binary-black, waterfall, watersplash, etc.
   # wallpaperPath = "${pkgs.nixos-artwork.wallpapers.simple-blue}/share/backgrounds/nixos/nix-wallpaper-simple-blue.png";
-  wallpaperPath = "~/Pictures/NixOS_Wallpaper/nix_gruv_two_color.jpg";
-in
-
-{
+  # wallpaperPath = "~/Pictures/NixOS_Wallpaper/nix_gruv_two_color.jpg";
+  wallpaper = ../../../assets/pictures/nix_gruv_two_color.jpg;
+in {
   # Install the wallpaper utility
   home.packages = [
     pkgs.swaybg
@@ -20,7 +21,7 @@ in
       startup = [
         {
           # -i specifies the image path, -m fill scales the image to fit the screen
-          command = "${pkgs.swaybg}/bin/swaybg -i ${wallpaperPath} -m fill";
+          command = "${pkgs.swaybg}/bin/swaybg -i ${wallpaper} -m fill";
           always = true;
         }
       ];
