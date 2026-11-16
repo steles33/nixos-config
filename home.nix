@@ -19,7 +19,7 @@
       pwvucontrol
       blueman
       xfce4-appfinder
-      syncthing
+      # syncthing
     ];
   };
 
