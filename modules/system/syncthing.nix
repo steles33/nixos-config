@@ -12,5 +12,7 @@
     configDir = "/home/steles33/.config/syncthing";
 
     openDefaultPorts = true;
+    settings.gui.address = "0.0.0.0:8384";
   };
+  networking.firewall.allowedTCPPorts = [8384];
 }
