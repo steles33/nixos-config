@@ -9,7 +9,7 @@
     nativeBuildInputs = [pkgs.makeWrapper];
 
     postBuild = ''
-      for program in calibre calibre-customize; do
+      for program in calibre calibre-customize calibre-debug; do
         wrapProgram "$out/bin/$program" \
           --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.openssl]} \
           --set ACSM_LIBCRYPTO "${pkgs.openssl.out}/lib/libcrypto.so.3" \
