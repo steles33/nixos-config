@@ -12,8 +12,8 @@
       for program in calibre calibre-customize; do
         wrapProgram "$out/bin/$program" \
           --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.openssl]} \
-          --set ACSM_LIBCRYPTO "${pkgs.openssl}/lib/libcrypto.so" \
-          --set ACSM_LIBSSL "${pkgs.openssl}/lib/libssl.so"
+          --set ACSM_LIBCRYPTO "${pkgs.openssl.out}/lib/libcrypto.so.3" \
+          --set ACSM_LIBSSL "${pkgs.openssl.out}/lib/libssl.so.3"
       done
     '';
   };
