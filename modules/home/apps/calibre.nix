@@ -3,8 +3,8 @@
   lib,
   ...
 }: let
-  calibreWithDeACSM = pkgs.symlinkJoin {
-    name = "calibre-with-deacsm";
+  calibreWithOpenSSL = pkgs.symlinkJoin {
+    name = "calibre-with-openssl";
     paths = [pkgs.calibre];
     nativeBuildInputs = [pkgs.makeWrapper];
 
@@ -12,14 +12,22 @@
       for program in calibre calibre-customize; do
         wrapProgram "$out/bin/$program" \
           --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.openssl]} \
-          --set ACSM_LIBCRYPTO "${pkgs.openssl.out}/lib/libcrypto.so" \
-          --set ACSM_LIBSSL "${pkgs.openssl.out}/lib/libssl.so"
+          --set ACSM_LIBCRYPTO "${pkgs.openssl}/lib/libcrypto.so" \
+          --set ACSM_LIBSSL "${pkgs.openssl}/lib/libssl.so"
       done
     '';
   };
 in {
   programs.calibre = {
     enable = true;
-    package = calibreWithDeACSM;
+    package = calibreWithOpenSSL;
   };
+
+  home.activation.installCalibrePlugins = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    ${calibreWithOpenSSL}/bin/calibre-customize \
+      --add-plugin ${./calibre-plugins/DeDRM.zip}
+
+    ${calibreWithOpenSSL}/bin/calibre-customize \
+      --add-plugin ${./calibre-plugins/DeACSM.zip}
+  '';
 }
