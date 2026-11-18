@@ -29,8 +29,8 @@ in {
     package = calibreWithDeACSM;
   };
 
-  home.activation.installDeACSM = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    ${calibreWithDeACSM}/bin/calibre-customize \
-      --add-plugin ${./calibre-plugins/DeACSM.zip}
-  '';
+  #home.activation.installDeACSM = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  #  ${calibreWithDeACSM}/bin/calibre-customize \
+  #    --add-plugin ${./calibre-plugins/DeACSM.zip}
+  #'';
 }
