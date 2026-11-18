@@ -16,6 +16,6 @@ in {
   programs.calibre = {
     enable = true;
     package = calibreWithOpenssl;
-    plugins = [./calibre-plugins/DeACSM.zip ./calibre-plugins/DeDRM.zip];
+    plugins = [./calibre-plugins];
   };
 }
