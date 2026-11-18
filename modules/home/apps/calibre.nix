@@ -3,20 +3,34 @@
   lib,
   ...
 }: let
-  calibreWithOpenssl = pkgs.symlinkJoin {
-    name = "calibre-with-openssl";
+  deacsmModules =
+    pkgs.runCommand "deacsm-python-modules" {
+      nativeBuildInputs = [pkgs.unzip];
+    } ''
+      mkdir -p "$out"
+      ${pkgs.unzip}/bin/unzip -q ${./calibre-plugins/DeACSM.zip} -d "$out"
+    '';
+
+  calibreWithDeACSM = pkgs.symlinkJoin {
+    name = "calibre-with-deacsm";
     paths = [pkgs.calibre];
     nativeBuildInputs = [pkgs.makeWrapper];
     postBuild = ''
-      wrapProgram $out/bin/calibre \
-        --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.openssl]} \
-        --prefix PYTHONPATH : ${./calibre-plugins/DeACSM.zip}
+      for program in calibre calibre-customize; do
+        wrapProgram "$out/bin/$program" \
+          --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.openssl]} \
+          --prefix PYTHONPATH : ${deacsmModules}
+      done
     '';
   };
 in {
   programs.calibre = {
     enable = true;
-    package = calibreWithOpenssl;
-    plugins = [./calibre-plugins];
+    package = calibreWithDeACSM;
   };
+
+  home.activation.installDeACSM = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    ${calibreWithDeACSM}/bin/calibre-customize \
+      --add-plugin ${./calibre-plugins/DeACSM.zip}
+  '';
 }
