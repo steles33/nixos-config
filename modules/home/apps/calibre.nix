@@ -9,7 +9,8 @@
     nativeBuildInputs = [pkgs.makeWrapper];
     postBuild = ''
       wrapProgram $out/bin/calibre \
-        --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.openssl]}
+        --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.openssl]} \
+        --prefix PYTHONPATH : ${./calibre-plugins/DeACSM.zip}
     '';
   };
 in {
