@@ -1,42 +1,35 @@
 {
-  lib,
   pkgs,
-  config,
+  lib,
   ...
 }: let
-  inherit
-    (lib)
-    types
-    mkIf
-    mkEnableOption
-    mkPackageOption
-    mkOption
-    ;
+  calibreWithOpenSSL = pkgs.symlinkJoin {
+    name = "calibre-with-openssl";
+    paths = [pkgs.calibre];
+    nativeBuildInputs = [pkgs.makeWrapper];
 
-  cfg = config.programs.calibre;
-in {
-  options.programs.calibre = {
-    enable = mkEnableOption "calibre";
-    package = mkPackageOption pkgs "calibre" {nullable = true;};
-    plugins = mkOption {
-      type = with types; listOf path;
-      default = [];
-      description = "List of plugins to install for calibre";
-    };
+    postBuild = ''
+      for program in calibre calibre-customize calibre-debug; do
+        wrapProgram "$out/bin/$program" \
+          --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [pkgs.openssl]} \
+          --set ACSM_LIBCRYPTO "${pkgs.openssl.out}/lib/libcrypto.so.3" \
+          --set ACSM_LIBSSL "${pkgs.openssl.out}/lib/libssl.so.3"
+      done
+    '';
   };
 
-  config = mkIf cfg.enable {
-    home.packages = mkIf (cfg.package != null) [cfg.package];
-    xdg.configFile = mkIf (cfg.plugins != []) (
-      let
-        symlinkedPlugins = pkgs.symlinkJoin {
-          name = "calibre-plugins";
-          paths = cfg.plugins;
-        };
-      in
-        lib.mapAttrs' (
-          k: _: lib.nameValuePair "calibre/plugins/${k}" {source = symlinkedPlugins + "/${k}";}
-        ) (builtins.readDir symlinkedPlugins)
-    );
+  pluginDir = name: archive:
+    pkgs.runCommand "calibre-plugin-${name}" {} ''
+      mkdir -p "$out"
+      ln -s ${archive} "$out/${name}.zip"
+    '';
+in {
+  programs.calibre = {
+    enable = true;
+    package = calibreWithOpenSSL;
+    plugins = [
+      (pluginDir "DeACSM" ./calibre-plugins/DeACSM_0.0.16.zip)
+      (pluginDir "DeDRM" ./calibre-plugins/DeDRM_tools_7.2.1.zip)
+    ];
   };
 }
