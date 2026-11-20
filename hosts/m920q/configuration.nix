@@ -118,6 +118,7 @@
       font-manager
       libreoffice
       alejandra
+      pdfarranger
     ];
     etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   };
