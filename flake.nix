@@ -13,6 +13,8 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    calibre-plugins.url = "github:nydragon/calibre-plugins";
   };
 
   outputs = {
@@ -20,6 +22,7 @@
     nixpkgs,
     home-manager,
     stylix,
+    calibre-plugins,
     ...
   }: {
     nixosConfigurations.m920q = nixpkgs.lib.nixosSystem {
@@ -34,6 +37,9 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "backup";
+            extraSpecialArgs = {
+              calibrePlugins = calibre-plugins;
+            };
             users.steles33 = import ./home.nix;
           };
         }

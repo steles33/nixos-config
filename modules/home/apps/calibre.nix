@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  calibrePlugins,
   ...
 }: let
   calibreWithOpenSSL = pkgs.symlinkJoin {
@@ -18,18 +19,23 @@
     '';
   };
 
-  pluginDir = name: archive:
-    pkgs.runCommand "calibre-plugin-${name}" {} ''
-      mkdir -p "$out"
-      ln -s ${archive} "$out/${name}.zip"
-    '';
+  plugins = calibrePlugins.packages.${pkgs.system};
 in {
   programs.calibre = {
     enable = true;
     package = calibreWithOpenSSL;
-    plugins = [
-      (pluginDir "DeACSM" ./calibre-plugins/DeACSM_0.0.16.zip)
-      (pluginDir "DeDRM" ./calibre-plugins/DeDRM_tools_7.2.1.zip)
-    ];
+    # Deliberately omit `plugins`: the upstream install script registers
+    # these archives with calibre-customize instead.
   };
+
+  home.activation.installCalibrePlugins = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    # Close Calibre before switching Home Manager generations.
+    ${calibreWithOpenSSL}/bin/calibre-customize -r "ACSM Input" || true
+    ${calibreWithOpenSSL}/bin/calibre-customize -r "DeDRM" || true
+
+    ${calibreWithOpenSSL}/bin/calibre-customize \
+      -a ${plugins."acsm-calibre-plugin"}
+    ${calibreWithOpenSSL}/bin/calibre-customize \
+      -a ${plugins."dedrm-plugin"}
+  '';
 }
