@@ -21,13 +21,9 @@ in {
   programs.calibre = {
     enable = true;
     package = calibreWithOpenSSL;
+    plugins = [
+      ./calibre-plugins/DeACSM.zip
+      ./calibre-plugins/DeDRM.zip
+    ]
   };
-
-  home.activation.installCalibrePlugins = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    ${calibreWithOpenSSL}/bin/calibre-customize \
-      --add-plugin ${./calibre-plugins/DeDRM.zip}
-
-    ${calibreWithOpenSSL}/bin/calibre-customize \
-      --add-plugin ${./calibre-plugins/DeACSM.zip}
-  '';
 }
