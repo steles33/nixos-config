@@ -24,6 +24,6 @@ in {
     plugins = [
       ./calibre-plugins/DeACSM.zip
       ./calibre-plugins/DeDRM.zip
-    ]
+    ];
   };
 }
