@@ -19,7 +19,7 @@
     '';
   };
 
-  plugins = calibrePlugins.packages.${pkgs.system};
+  plugins = calibrePlugins.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   programs.calibre = {
     enable = true;
