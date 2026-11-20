@@ -68,6 +68,24 @@
         "type": "github"
       }
     },
+    "calibre-plugins": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1773076115,
+        "narHash": "sha256-X5dmVcQgUOX7S3lsPS5KLuQaVTxZs7j+X75acz2CT3o=",
+        "owner": "nydragon",
+        "repo": "calibre-plugins",
+        "rev": "3f99ce55a85120a2408ec80284c6c14c4e701e0b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nydragon",
+        "repo": "calibre-plugins",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -162,6 +180,21 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1742335908,
+        "narHash": "sha256-unmSiGsXmUAZ4fAcSgf1iwssLmt/FLrczhLAsosyLh8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "fb9a9ddebc6c9685d2b6b98b35f134573e1872c8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1795085501,
         "narHash": "sha256-S5keGWzaKpuXo9MNoIC2FfTIuTyTnx8P4NhYJMEsTLI=",
         "owner": "nixos",
@@ -203,8 +236,9 @@
     },
     "root": {
       "inputs": {
+        "calibre-plugins": "calibre-plugins",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "stylix": "stylix"
       }
     },
