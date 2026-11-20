@@ -17,13 +17,19 @@
       done
     '';
   };
+
+  pluginDir = name: archive:
+    pkgs.runCommand "calibre-plugin-${name}" {} ''
+      mkdir -p "$out"
+      ln -s ${archive} "$out/${name}.zip"
+    '';
 in {
   programs.calibre = {
     enable = true;
     package = calibreWithOpenSSL;
     plugins = [
-      ./calibre-plugins/DeACSM.zip
-      ./calibre-plugins/DeDRM.zip
+      (pluginDir "DeACSM" ./calibre-plugins/DeACSM.zip)
+      (pluginDir "DeDRM" ./calibre-plugins/DeDRM.zip)
     ];
   };
 }
