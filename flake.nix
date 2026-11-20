@@ -33,6 +33,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
+            backupFileExtension = "backup";
             users.steles33 = import ./home.nix;
           };
         }

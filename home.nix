@@ -44,5 +44,4 @@
     ./modules/home/apps/btop.nix
     ./modules/home/apps/calibre.nix
   ];
-  home-manager.backupFileExtension = "backup";
 }
