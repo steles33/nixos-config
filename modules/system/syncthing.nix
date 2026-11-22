@@ -13,7 +13,7 @@
     settings.gui.address = "0.0.0.0:8384";
     devices = {
       "t460p" {
-        id = FJ6O2TN-EIQ2GIC-6ZRCJ24-HZFERK6-DXUWQO5-4QWZJF6-YDAALXL-52OIAAE
+        id = "FJ6O2TN-EIQ2GIC-6ZRCJ24-HZFERK6-DXUWQO5-4QWZJF6-YDAALXL-52OIAAE";
       };
     };
     folders = {
