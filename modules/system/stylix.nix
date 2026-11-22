@@ -47,6 +47,7 @@
       };
       qt = {
         enable = true;
+        platform = "qtct";
       };
     };
     icons = {
