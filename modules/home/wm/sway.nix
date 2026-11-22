@@ -5,10 +5,6 @@
 }: {
   wayland.windowManager.sway = {
     enable = true;
-    extraSessionCommands = ''
-      export QT_STYLE_OVERRIDE=kvantum
-      export QT_QPA_PLATFORMTHEME=qt6ct
-    '';
     wrapperFeatures.gtk = true;
     config = rec {
       modifier = "Mod4";
