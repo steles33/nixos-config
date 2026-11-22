@@ -112,6 +112,12 @@
       kdePackages.breeze
       kdePackages.breeze-icons
       kdePackages.breeze-gtk
+      kdePackages.qtstyleplugin-kvantum
+      libsForQt5.qtstyleplugins
+      qt6Packages.qtstyleplugins
+      qt6Packages.qt6ct
+      qt6Packages.qt6gtk2
+      qt6Packages.qt6wayland
       # lxqt.lximage-qt
       # pcmanfm-qt
       thunar
