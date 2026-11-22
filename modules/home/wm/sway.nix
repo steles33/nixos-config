@@ -22,7 +22,7 @@
         "${modifier}+u" = "exec thunderbird";
         "${modifier}+n" = "exec signal-desktop";
         # "${modifier}+o" = "exec dolphin --split";
-        "${modifier}+o" = "exec pcmanfm-qt";
+        "${modifier}+o" = "exec thunar";
         "${modifier}+k" = "exec krusader --left ~ --right ~";
         "${modifier}+m" = "exec elisa";
         "${modifier}+c" = "exec codium";

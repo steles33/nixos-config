@@ -112,8 +112,13 @@
       kdePackages.breeze
       kdePackages.breeze-icons
       kdePackages.breeze-gtk
-      lxqt.lximage-qt
-      pcmanfm-qt
+      # lxqt.lximage-qt
+      # pcmanfm-qt
+      xfce.thunar
+      xfce.thunar-volman
+      xfce.thunar-archive-plugin
+      xfce.tumbler
+      xfce.xarchiver
       vlc
       font-manager
       libreoffice
