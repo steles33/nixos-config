@@ -118,7 +118,7 @@
       xfce.thunar-volman
       xfce.thunar-archive-plugin
       xfce.tumbler
-      xfce.xarchiver
+      xarchiver
       vlc
       font-manager
       libreoffice
