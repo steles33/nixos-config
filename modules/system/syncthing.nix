@@ -15,18 +15,19 @@
       devices = {
         "t460p" = {
           id = "FJ6O2TN-EIQ2GIC-6ZRCJ24-HZFERK6-DXUWQO5-4QWZJF6-YDAALXL-52OIAAE";
+        };
       };
-    };
-    folders = {
-      "Sync" = {
-        id = "default";
-        path = "~/Sync";
-        devices = ["t460p"];
-      };
-      "skl_personal_cloud" = {
-        id = "u3iz4-pkdqh";
-        path = "~/Documents/skl_personal_cloud";
-        devices = ["t460p"];
+      folders = {
+        "Sync" = {
+          id = "default";
+          path = "~/Sync";
+          devices = ["t460p"];
+        };
+        "skl_personal_cloud" = {
+          id = "u3iz4-pkdqh";
+          path = "~/Documents/skl_personal_cloud";
+          devices = ["t460p"];
+        };
       };
     };
   };
