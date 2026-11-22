@@ -114,10 +114,9 @@
       kdePackages.breeze-gtk
       # lxqt.lximage-qt
       # pcmanfm-qt
-      xfce.thunar
-      xfce.thunar-volman
-      xfce.thunar-archive-plugin
-      xfce.tumbler
+      thunar
+      thunar-volman
+      thunar-archive-plugin
       xarchiver
       vlc
       font-manager
