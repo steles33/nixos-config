@@ -45,6 +45,9 @@
         enable = true;
         logo = ../../NixOS.png;
       };
+      qt = {
+        enable = true;
+      };
     };
     icons = {
       enable = true;
