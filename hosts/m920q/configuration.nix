@@ -114,10 +114,6 @@
       kdePackages.breeze-gtk
       kdePackages.qtstyleplugin-kvantum
       libsForQt5.qtstyleplugins
-      qt6Packages.qt6ct
-      qt6Packages.qt6wayland
-      # lxqt.lximage-qt
-      # pcmanfm-qt
       thunar
       thunar-volman
       thunar-archive-plugin
