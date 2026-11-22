@@ -12,7 +12,7 @@
     openDefaultPorts = true;
     settings.gui.address = "0.0.0.0:8384";
     devices = {
-      "t460p" {
+      "t460p" = {
         id = "FJ6O2TN-EIQ2GIC-6ZRCJ24-HZFERK6-DXUWQO5-4QWZJF6-YDAALXL-52OIAAE";
       };
     };
@@ -20,12 +20,12 @@
       "Sync" = {
         id = "Sync";
         path = "~/Sync";
-        devices = [ "t460p" ];
+        devices = ["t460p"];
       };
       "skl_personal_cloud" = {
         id = "skl_personal_cloud";
         path = "~/Documents/skl_personal_cloud";
-        devices = [ "t460p" ];
+        devices = ["t460p"];
       };
     };
   };
