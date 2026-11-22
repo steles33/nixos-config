@@ -18,12 +18,12 @@
     };
     folders = {
       "Sync" = {
-        id = "Sync";
+        id = "default";
         path = "~/Sync";
         devices = ["t460p"];
       };
       "skl_personal_cloud" = {
-        id = "skl_personal_cloud";
+        id = "u3iz4-pkdqh";
         path = "~/Documents/skl_personal_cloud";
         devices = ["t460p"];
       };
