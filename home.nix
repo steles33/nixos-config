@@ -10,6 +10,7 @@
     stateVersion = "26.05";
     packages = with pkgs; [
       firefox
+      signal-desktop
       wl-clipboard
       grim
       slurp
