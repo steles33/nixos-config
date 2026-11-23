@@ -5,7 +5,10 @@
 }: {
   wayland.windowManager.sway = {
     enable = true;
-    extraSessionCommands = ''export QT_STYLE_OVERRIDE=kvantum '';
+    extraSessionCommands = ''
+      export QT_STYLE_OVERRIDE=kvantum
+      export XDG_CONFIG_DIRS=/nix/store/yl4icsv3dqrmljyc1yl8cizf9rpb48jv-stylix-kde-config:/etc/xdg:$HOME/.nix-profile/etc/xdg:/nix/profile/etc/xdg:$HOME/.local/state/nix/profile/etc/xdg:/etc/profiles/per-user/$USER/etc/xdg:/nix/var/nix/profiles/default/etc/xdg:/run/current-system/sw/etc/xdg
+    '';
     wrapperFeatures.gtk = true;
     config = rec {
       modifier = "Mod4";
