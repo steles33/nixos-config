@@ -123,7 +123,7 @@
       pdfarranger
       loupe
     ];
-    environment.sessionVariables = {
+    sessionVariables = {
       QT_STYLE_OVERRIDE = "kvantum";
       XDG_CONFIG_DIRS = "/nix/store/yl4icsv3dqrmljyc1yl8cizf9rpb48jv-stylix-kde-config:/etc/xdg";
     };
