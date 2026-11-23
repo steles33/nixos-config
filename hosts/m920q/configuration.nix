@@ -112,11 +112,6 @@
       kdePackages.breeze
       kdePackages.breeze-icons
       kdePackages.breeze-gtk
-      kdePackages.qt6ct
-      kdePackages.qtstyleplugin-kvantum
-      libsForQt5.qt5ct
-      libsForQt5.qtstyleplugins
-      libsForQt5.qtstyleplugin-kvantum
       thunar
       thunar-volman
       thunar-archive-plugin
