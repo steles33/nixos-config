@@ -5,6 +5,7 @@
 }: {
   wayland.windowManager.sway = {
     enable = true;
+    extraSessionCommands = ''export QT_STYLE_OVERRIDE=kvantum '';
     wrapperFeatures.gtk = true;
     config = rec {
       modifier = "Mod4";
