@@ -49,6 +49,7 @@
         enable = true;
         platform = "qtct";
       };
+      kde.enable = true;
     };
     icons = {
       enable = true;
