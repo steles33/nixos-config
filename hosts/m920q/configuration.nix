@@ -112,8 +112,8 @@
       kdePackages.breeze
       kdePackages.breeze-icons
       kdePackages.breeze-gtk
-      kdePackages.dolphin
-      kdePackages.dolphin-plugins
+      # kdePackages.dolphin
+      # kdePackages.dolphin-plugins
       thunar
       thunar-volman
       thunar-archive-plugin
