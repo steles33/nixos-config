@@ -29,7 +29,7 @@
       gs = "git status";
       gu = "git add . && git commit -m \"update\" && git push && git status";
       rebuild = "sudo nixos-rebuild switch --flake .#m920q";
-      music = "ncmpcpp"
+      music = "ncmpcpp";
     };
   };
 }
